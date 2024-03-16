@@ -1,12 +1,12 @@
 package domain;
 
 public class Bilet extends Entity<Long> {
-    private Long idMeci;
+    private Meci meci;
     private String numeClient;
     private int nrLocuri;
 
-    public Bilet(Long idMeci, String numeClient, int nrLocuri) {
-        this.idMeci = idMeci;
+    public Bilet(Meci meci, String numeClient, int nrLocuri) {
+        this.meci = meci;
         this.numeClient = numeClient;
         this.nrLocuri = nrLocuri;
     }

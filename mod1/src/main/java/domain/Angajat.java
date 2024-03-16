@@ -4,9 +4,11 @@ import java.util.Objects;
 
 public class Angajat extends Entity<Long> {
     private String parola;
+    private String username;
 
-    public Angajat(String parola) {
+    public Angajat(String parola, String username) {
         this.parola = parola;
+        this.username = username;
     }
 
 
@@ -15,12 +17,13 @@ public class Angajat extends Entity<Long> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Angajat angajat)) return false;
-        if (!super.equals(o)) return false;
-        return Objects.equals(parola, angajat.parola);
+        if (super.equals(o)) return true;
+        return Objects.equals(parola, angajat.parola) &&
+                Objects.equals(username, angajat.username);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), parola);
+        return Objects.hash(super.hashCode(), parola, username);
     }
 }

@@ -1,14 +1,18 @@
 package domain;
 
+import java.time.LocalDate;
+
 public class Meci extends Entity<Long> {
     private String nume;
     private double pretBilet;
-    private int nrLocuriDisponibile;
+    private int capacitate;
+    private LocalDate data;
 
-    public Meci(String nume, double pretBilet, int nrLocuriDisponibile) {
+    public Meci(String nume, double pretBilet, int capacitate, LocalDate data) {
         this.nume = nume;
         this.pretBilet = pretBilet;
-        this.nrLocuriDisponibile = nrLocuriDisponibile;
+        this.capacitate = capacitate;
+        this.data = data;
     }
 
     public String getNume() {
@@ -19,11 +23,11 @@ public class Meci extends Entity<Long> {
         return pretBilet;
     }
 
-    public int getNrLocuriDisponibile() {
-        return nrLocuriDisponibile;
+    public int getCapacitate() {
+        return capacitate;
     }
 
-    public void setNrLocuriDisponibile(int nrLocuriDisponibile) {
-        this.nrLocuriDisponibile = nrLocuriDisponibile;
+    public LocalDate getData() {
+        return data;
     }
 }
