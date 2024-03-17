@@ -18,13 +18,7 @@ public class Start {
         } catch (IOException e) {
             System.out.println("Cannot find bd.config "+e);
         }
-
-//        IMeciRepository meciRepository = new MeciDBRepository(props);
-//        Meci meci = meciRepository.findOne(1);
-//        Bilet bilet = new Bilet(meci, "Ana Maria", 2);
-//        IBiletRepository biletRepository = new BiletDBRepository(props);
-//        biletRepository.create(bilet);
-//        System.out.println(biletRepository.size());
+        
 
         IAngajatRepository angajatRepository = new AngajatDBRepository(props);
         Angajat angajat = angajatRepository.findByUsername("ionescu_ion");
