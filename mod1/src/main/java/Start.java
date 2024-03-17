@@ -5,6 +5,7 @@ import repository.*;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Properties;
 
 public class Start {
@@ -25,5 +26,13 @@ public class Start {
 //        biletRepository.create(bilet);
 //        System.out.println(biletRepository.size());
 
+        IAngajatRepository angajatRepository = new AngajatDBRepository(props);
+        Angajat angajat = angajatRepository.findByUsername("ionescu_ion");
+        IMeciRepository meciRepository = new MeciDBRepository(props);
+        Meci meci = meciRepository.findOne(1);
+        meciRepository.findAll();
+        IBiletRepository biletRepository = new BiletDBRepository(props);
+        biletRepository.create(new Bilet(meci, "Mihai Eminescu", 2));
+        biletRepository.size();
     }
 }

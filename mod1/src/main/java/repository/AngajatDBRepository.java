@@ -1,6 +1,8 @@
 package repository;
 
 import domain.Angajat;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import utils.JdbcUtils;
 
 import java.sql.Connection;
@@ -15,8 +17,11 @@ public class AngajatDBRepository implements IAngajatRepository {
 
     private JdbcUtils dbUtils;
 
+    private static final Logger logger = LogManager.getLogger();
+
     public AngajatDBRepository(Properties props) {
         dbUtils = new JdbcUtils(props);
+        logger.info("Initializing AngajatDBRepository with DBUtils: {} ", dbUtils);
     }
 
     @Override
@@ -51,12 +56,14 @@ public class AngajatDBRepository implements IAngajatRepository {
 
     @Override
     public Angajat findByUsername(String username) {
-        //logger.traceEntry();
+        logger.traceEntry();
         Angajat angajat = null;
+        logger.info("Getting a connection with db");
         Connection con = dbUtils.getConnection();
         try (PreparedStatement preStmt = con.prepareStatement(
                 "select * from angajati where username=?"))
         {
+            logger.info("Prepare Statement: select * from angajati where username={} ", username);
             preStmt.setString(1, username);
             try (ResultSet result = preStmt.executeQuery()) {
                 while (result.next()) {
@@ -64,10 +71,11 @@ public class AngajatDBRepository implements IAngajatRepository {
                     String parola = result.getString("parola");
                     angajat = new Angajat(parola, username);
                     angajat.setId(id);
+                    logger.info("Angajat gasit : {} ", angajat);
                 }
 
             } catch (SQLException e) {
-                //logger.error(e);
+                logger.error(e);
                 System.err.println("Error DB " + e);
                 return angajat;
 
@@ -75,6 +83,7 @@ public class AngajatDBRepository implements IAngajatRepository {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        logger.traceExit(angajat);
         return angajat;
     }
 }

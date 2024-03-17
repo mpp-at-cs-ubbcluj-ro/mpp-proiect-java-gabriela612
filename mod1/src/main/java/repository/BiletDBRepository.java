@@ -1,6 +1,8 @@
 package repository;
 
 import domain.Bilet;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import utils.JdbcUtils;
 
 import java.sql.Connection;
@@ -12,9 +14,11 @@ import java.util.Properties;
 public class BiletDBRepository implements IBiletRepository {
 
     private JdbcUtils dbUtils;
+    private static final Logger logger = LogManager.getLogger();
 
     public BiletDBRepository(Properties props) {
         dbUtils = new JdbcUtils(props);
+        logger.info("Initializing MeciDBRepository with DBUtils: {} ", dbUtils);
     }
 
     @Override
@@ -29,9 +33,15 @@ public class BiletDBRepository implements IBiletRepository {
 
     @Override
     public Bilet create(Bilet entity) {
-        //logger.traceEntry("saving task {} ",elem);
+        logger.traceEntry("saving bilet {} ", entity);
+
+        logger.info("Getting a connection with db");
 
         Connection con=dbUtils.getConnection();
+
+        logger.info("Prepare Statement: insert into bilete (id_meci, " +
+                "nume_client, nr_locuri) values ({},{},{})", entity.getMeci().getId(),
+                entity.getNumeClient(), entity.getNrLocuri());
 
         try(PreparedStatement preStnt=con.prepareStatement("insert into bilete (id_meci, nume_client, nr_locuri) values (?,?,?)")) {
 
@@ -43,7 +53,7 @@ public class BiletDBRepository implements IBiletRepository {
 
             int result = preStnt.executeUpdate();
 
-            //logger.trace("Saved {} instances", result);
+            logger.trace("Saved {} instances", result);
 
             ResultSet generatedKeys = preStnt.getGeneratedKeys();
             if (generatedKeys.next()) {
@@ -53,11 +63,11 @@ public class BiletDBRepository implements IBiletRepository {
         }
         catch (SQLException ex) {
 
-            //logger.error(ex);
+            logger.error(ex);
 
             System.err.println("Error DB + ex");
-            //logger.traceExit();
         }
+        logger.traceExit(entity);
         return entity;
     }
 
@@ -73,8 +83,12 @@ public class BiletDBRepository implements IBiletRepository {
 
     @Override
     public int size() {
+        logger.traceEntry();
         int numarBilete = 0;
+        logger.info("Getting a connection with db");
         Connection con = dbUtils.getConnection();
+
+        logger.info("Prepare Statement: SELECT COUNT(*) AS numar_bilete FROM bilete");
 
         try {
             PreparedStatement preStmt = con.prepareStatement("SELECT COUNT(*) AS numar_bilete FROM bilete");
@@ -82,11 +96,14 @@ public class BiletDBRepository implements IBiletRepository {
 
             if (result.next()) {
                 numarBilete = result.getInt("numar_bilete");
+                logger.info("Numar bilete gasit : {} ", numarBilete);
             }
-        } catch (SQLException ex) {
-            System.err.println("Eroare la interogare: " + ex.getMessage());
-            ex.printStackTrace();
+        } catch (SQLException e) {
+            logger.error(e);
+            System.err.println("Error DB " + e);
+            return numarBilete;
         }
+        logger.traceExit(numarBilete);
         return numarBilete;
     }
 }
