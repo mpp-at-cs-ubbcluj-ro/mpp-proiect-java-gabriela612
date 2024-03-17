@@ -2,7 +2,7 @@ package domain;
 
 import java.util.Objects;
 
-public class Angajat extends Entity<Long> {
+public class Angajat extends Entity<Integer> {
     private String parola;
     private String username;
 

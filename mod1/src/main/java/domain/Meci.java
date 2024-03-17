@@ -2,7 +2,7 @@ package domain;
 
 import java.time.LocalDate;
 
-public class Meci extends Entity<Long> {
+public class Meci extends Entity<Integer> {
     private String nume;
     private double pretBilet;
     private int capacitate;

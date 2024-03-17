@@ -1,6 +1,6 @@
 package domain;
 
-public class Bilet extends Entity<Long> {
+public class Bilet extends Entity<Integer> {
     private Meci meci;
     private String numeClient;
     private int nrLocuri;
@@ -9,5 +9,17 @@ public class Bilet extends Entity<Long> {
         this.meci = meci;
         this.numeClient = numeClient;
         this.nrLocuri = nrLocuri;
+    }
+
+    public Meci getMeci() {
+        return meci;
+    }
+
+    public String getNumeClient() {
+        return numeClient;
+    }
+
+    public int getNrLocuri() {
+        return nrLocuri;
     }
 }
