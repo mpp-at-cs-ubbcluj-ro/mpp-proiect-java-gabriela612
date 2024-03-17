@@ -8,4 +8,5 @@ public interface Repository<ID, E extends Entity<ID>> {
     public E create(E entity);
     public E delete(ID id);
     public E update(E entity);
+    public int size();
 }
