@@ -127,6 +127,8 @@ public class MeciuriController {
                     "Error", "S-a produs o eroare neasteptata. Va rog sa incercati mai tarziu.");
             return;
         }
+
+        initData();
         MessageBox.showMessage(null, Alert.AlertType.INFORMATION,
                 "Succes", "Cumpararea biletului a fost inregistrata in baza de date.");
     }
