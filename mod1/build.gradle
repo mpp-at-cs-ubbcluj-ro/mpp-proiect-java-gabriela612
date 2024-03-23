@@ -1,10 +1,15 @@
 plugins {
     id 'java'
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
 group = 'ro.mpp2024'
 version = '1.0-SNAPSHOT'
+
+javafx {
+    modules = [ 'javafx.controls' , 'javafx.fxml']
+}
 
 repositories {
     mavenCentral()
@@ -19,11 +24,20 @@ dependencies {
     implementation 'org.apache.logging.log4j:log4j-core:2.23.0'
     implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.45.1.0'
     implementation 'org.slf4j:slf4j-api:1.7.32'
-    implementation 'ch.qos.logback:logback-classic:1.2.6'
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
+
+    // https://mvnrepository.com/artifact/org.openjfx/javafx-controls
+    implementation 'org.openjfx:javafx-controls:23-ea+3'
+
+    implementation('org.controlsfx:controlsfx:11.1.1')
+    implementation('com.dlsc.formsfx:formsfx-core:11.5.0') {
+        exclude(group: 'org.openjfx')
+    }
+    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
 }
 
 application {
-    mainClass='Start'
+    mainClass='pachet.Start'
 }
 
 jar {

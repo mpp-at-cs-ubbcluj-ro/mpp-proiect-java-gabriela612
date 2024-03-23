@@ -27,3 +27,280 @@
 17 Mar 2024 15:22:19,057 [main] repository.BiletDBRepository 91 size - Prepare Statement: SELECT COUNT(*) AS numar_bilete FROM bilete
 17 Mar 2024 15:22:19,059 [main] repository.BiletDBRepository 99 size - Numar bilete gasit : 4 
 17 Mar 2024 15:22:19,059 [main] repository.BiletDBRepository 106 size - Exit with(4)
+18 Mar 2024 18:59:06,824 [main] repository.AngajatDBRepository 24 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@662b4c69 
+18 Mar 2024 18:59:06,834 [main] repository.AngajatDBRepository 59 findByUsername - Enter
+18 Mar 2024 18:59:06,834 [main] repository.AngajatDBRepository 61 findByUsername - Getting a connection with db
+18 Mar 2024 18:59:07,883 [main] repository.AngajatDBRepository 66 findByUsername - Prepare Statement: select * from angajati where username=ionescu_ion 
+18 Mar 2024 18:59:07,899 [main] repository.AngajatDBRepository 74 findByUsername - Angajat gasit : Entity{id=2} 
+18 Mar 2024 18:59:07,904 [main] repository.AngajatDBRepository 86 findByUsername - Exit with(Entity{id=2})
+18 Mar 2024 18:59:07,907 [main] repository.MeciDBRepository 25 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@928763c 
+18 Mar 2024 18:59:07,908 [main] repository.MeciDBRepository 30 findOne - Enter
+18 Mar 2024 18:59:07,908 [main] repository.MeciDBRepository 32 findOne - Getting a connection with db
+18 Mar 2024 18:59:07,910 [main] repository.MeciDBRepository 37 findOne - Prepare Statement : select * from meciuri where id=1
+18 Mar 2024 18:59:07,933 [main] repository.MeciDBRepository 48 findOne - Meci gasit : Entity{id=1} 
+18 Mar 2024 18:59:07,933 [main] repository.MeciDBRepository 62 findOne - Exit with(Entity{id=1})
+18 Mar 2024 18:59:07,933 [main] repository.MeciDBRepository 68 findAll - Enter
+18 Mar 2024 18:59:07,934 [main] repository.MeciDBRepository 69 findAll - Getting a connection with db
+18 Mar 2024 18:59:07,939 [main] repository.MeciDBRepository 72 findAll - Prepare Statement: select * from meciuri
+18 Mar 2024 18:59:07,940 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=1} 
+18 Mar 2024 18:59:07,942 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=2} 
+18 Mar 2024 18:59:07,944 [main] repository.MeciDBRepository 98 findAll - Exit with([Entity{id=1}, Entity{id=2}])
+18 Mar 2024 18:59:07,947 [main] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@205d38da 
+18 Mar 2024 18:59:07,948 [main] repository.BiletDBRepository 36 create - Enter saving bilet Entity{id=null} 
+18 Mar 2024 18:59:07,950 [main] repository.BiletDBRepository 38 create - Getting a connection with db
+18 Mar 2024 18:59:07,955 [main] repository.BiletDBRepository 42 create - Prepare Statement: insert into bilete (id_meci, nume_client, nr_locuri) values (1,Mihai Eminescu,2)
+18 Mar 2024 18:59:08,026 [main] repository.BiletDBRepository 56 create - Saved 1 instances
+18 Mar 2024 18:59:08,027 [main] repository.BiletDBRepository 70 create - Exit with(Entity{id=10})
+18 Mar 2024 18:59:08,027 [main] repository.BiletDBRepository 86 size - Enter
+18 Mar 2024 18:59:08,027 [main] repository.BiletDBRepository 88 size - Getting a connection with db
+18 Mar 2024 18:59:08,027 [main] repository.BiletDBRepository 91 size - Prepare Statement: SELECT COUNT(*) AS numar_bilete FROM bilete
+18 Mar 2024 18:59:08,028 [main] repository.BiletDBRepository 99 size - Numar bilete gasit : 5 
+18 Mar 2024 18:59:08,029 [main] repository.BiletDBRepository 106 size - Exit with(5)
+18 Mar 2024 19:00:41,685 [main] repository.AngajatDBRepository 24 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@662b4c69 
+18 Mar 2024 19:00:41,691 [main] repository.AngajatDBRepository 59 findByUsername - Enter
+18 Mar 2024 19:00:41,691 [main] repository.AngajatDBRepository 61 findByUsername - Getting a connection with db
+18 Mar 2024 19:00:42,216 [main] repository.AngajatDBRepository 66 findByUsername - Prepare Statement: select * from angajati where username=ionescu_ion 
+18 Mar 2024 19:00:42,227 [main] repository.AngajatDBRepository 74 findByUsername - Angajat gasit : Entity{id=2} 
+18 Mar 2024 19:00:42,231 [main] repository.AngajatDBRepository 86 findByUsername - Exit with(Entity{id=2})
+18 Mar 2024 19:00:42,233 [main] repository.MeciDBRepository 25 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@928763c 
+18 Mar 2024 19:00:42,234 [main] repository.MeciDBRepository 30 findOne - Enter
+18 Mar 2024 19:00:42,234 [main] repository.MeciDBRepository 32 findOne - Getting a connection with db
+18 Mar 2024 19:00:42,236 [main] repository.MeciDBRepository 37 findOne - Prepare Statement : select * from meciuri where id=1
+18 Mar 2024 19:00:42,244 [main] repository.MeciDBRepository 48 findOne - Meci gasit : Entity{id=1} 
+18 Mar 2024 19:00:42,245 [main] repository.MeciDBRepository 62 findOne - Exit with(Entity{id=1})
+18 Mar 2024 19:00:42,245 [main] repository.MeciDBRepository 68 findAll - Enter
+18 Mar 2024 19:00:42,245 [main] repository.MeciDBRepository 69 findAll - Getting a connection with db
+18 Mar 2024 19:00:42,246 [main] repository.MeciDBRepository 72 findAll - Prepare Statement: select * from meciuri
+18 Mar 2024 19:00:42,246 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=1} 
+18 Mar 2024 19:00:42,247 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=2} 
+18 Mar 2024 19:00:42,248 [main] repository.MeciDBRepository 98 findAll - Exit with([Entity{id=1}, Entity{id=2}])
+18 Mar 2024 19:00:42,250 [main] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@205d38da 
+18 Mar 2024 19:00:42,250 [main] repository.BiletDBRepository 36 create - Enter saving bilet Entity{id=null} 
+18 Mar 2024 19:00:42,251 [main] repository.BiletDBRepository 38 create - Getting a connection with db
+18 Mar 2024 19:00:42,252 [main] repository.BiletDBRepository 42 create - Prepare Statement: insert into bilete (id_meci, nume_client, nr_locuri) values (1,Stefan Eminescu,2)
+18 Mar 2024 19:00:42,291 [main] repository.BiletDBRepository 56 create - Saved 1 instances
+18 Mar 2024 19:00:42,291 [main] repository.BiletDBRepository 70 create - Exit with(Entity{id=11})
+18 Mar 2024 19:00:42,292 [main] repository.BiletDBRepository 86 size - Enter
+18 Mar 2024 19:00:42,292 [main] repository.BiletDBRepository 88 size - Getting a connection with db
+18 Mar 2024 19:00:42,292 [main] repository.BiletDBRepository 91 size - Prepare Statement: SELECT COUNT(*) AS numar_bilete FROM bilete
+18 Mar 2024 19:00:42,293 [main] repository.BiletDBRepository 99 size - Numar bilete gasit : 6 
+18 Mar 2024 19:00:42,293 [main] repository.BiletDBRepository 106 size - Exit with(6)
+23 Mar 2024 14:11:07,880 [main] repository.AngajatDBRepository 24 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@662b4c69 
+23 Mar 2024 14:11:07,884 [main] repository.AngajatDBRepository 59 findByUsername - Enter
+23 Mar 2024 14:11:07,884 [main] repository.AngajatDBRepository 61 findByUsername - Getting a connection with db
+23 Mar 2024 14:11:10,172 [main] repository.AngajatDBRepository 66 findByUsername - Prepare Statement: select * from angajati where username=ionescu_ion 
+23 Mar 2024 14:11:10,179 [main] repository.AngajatDBRepository 74 findByUsername - Angajat gasit : Entity{id=2} 
+23 Mar 2024 14:11:10,182 [main] repository.AngajatDBRepository 86 findByUsername - Exit with(Entity{id=2})
+23 Mar 2024 14:11:10,185 [main] repository.MeciDBRepository 25 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@928763c 
+23 Mar 2024 14:11:10,185 [main] repository.MeciDBRepository 30 findOne - Enter
+23 Mar 2024 14:11:10,185 [main] repository.MeciDBRepository 32 findOne - Getting a connection with db
+23 Mar 2024 14:11:10,187 [main] repository.MeciDBRepository 37 findOne - Prepare Statement : select * from meciuri where id=1
+23 Mar 2024 14:11:10,211 [main] repository.MeciDBRepository 48 findOne - Meci gasit : Entity{id=1} 
+23 Mar 2024 14:11:10,211 [main] repository.MeciDBRepository 62 findOne - Exit with(Entity{id=1})
+23 Mar 2024 14:11:10,211 [main] repository.MeciDBRepository 68 findAll - Enter
+23 Mar 2024 14:11:10,212 [main] repository.MeciDBRepository 69 findAll - Getting a connection with db
+23 Mar 2024 14:11:10,212 [main] repository.MeciDBRepository 72 findAll - Prepare Statement: select * from meciuri
+23 Mar 2024 14:11:10,213 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=1} 
+23 Mar 2024 14:11:10,213 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=2} 
+23 Mar 2024 14:11:10,214 [main] repository.MeciDBRepository 98 findAll - Exit with([Entity{id=1}, Entity{id=2}])
+23 Mar 2024 14:11:10,216 [main] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@205d38da 
+23 Mar 2024 14:11:10,216 [main] repository.BiletDBRepository 36 create - Enter saving bilet Entity{id=null} 
+23 Mar 2024 14:11:10,217 [main] repository.BiletDBRepository 38 create - Getting a connection with db
+23 Mar 2024 14:11:10,218 [main] repository.BiletDBRepository 42 create - Prepare Statement: insert into bilete (id_meci, nume_client, nr_locuri) values (1,Stefan Eminescu,2)
+23 Mar 2024 14:11:10,244 [main] repository.BiletDBRepository 56 create - Saved 1 instances
+23 Mar 2024 14:11:10,244 [main] repository.BiletDBRepository 70 create - Exit with(Entity{id=12})
+23 Mar 2024 14:11:10,245 [main] repository.BiletDBRepository 86 size - Enter
+23 Mar 2024 14:11:10,245 [main] repository.BiletDBRepository 88 size - Getting a connection with db
+23 Mar 2024 14:11:10,245 [main] repository.BiletDBRepository 91 size - Prepare Statement: SELECT COUNT(*) AS numar_bilete FROM bilete
+23 Mar 2024 14:11:10,246 [main] repository.BiletDBRepository 99 size - Numar bilete gasit : 7 
+23 Mar 2024 14:11:10,246 [main] repository.BiletDBRepository 106 size - Exit with(7)
+23 Mar 2024 14:12:59,435 [main] repository.AngajatDBRepository 24 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@662b4c69 
+23 Mar 2024 14:12:59,443 [main] repository.AngajatDBRepository 59 findByUsername - Enter
+23 Mar 2024 14:12:59,443 [main] repository.AngajatDBRepository 61 findByUsername - Getting a connection with db
+23 Mar 2024 14:12:59,886 [main] repository.AngajatDBRepository 66 findByUsername - Prepare Statement: select * from angajati where username=ionescu_ion 
+23 Mar 2024 14:12:59,890 [main] repository.AngajatDBRepository 74 findByUsername - Angajat gasit : Entity{id=2} 
+23 Mar 2024 14:12:59,892 [main] repository.AngajatDBRepository 86 findByUsername - Exit with(Entity{id=2})
+23 Mar 2024 14:12:59,894 [main] repository.MeciDBRepository 25 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@928763c 
+23 Mar 2024 14:12:59,894 [main] repository.MeciDBRepository 30 findOne - Enter
+23 Mar 2024 14:12:59,894 [main] repository.MeciDBRepository 32 findOne - Getting a connection with db
+23 Mar 2024 14:12:59,896 [main] repository.MeciDBRepository 37 findOne - Prepare Statement : select * from meciuri where id=1
+23 Mar 2024 14:12:59,910 [main] repository.MeciDBRepository 48 findOne - Meci gasit : Entity{id=1} 
+23 Mar 2024 14:12:59,910 [main] repository.MeciDBRepository 62 findOne - Exit with(Entity{id=1})
+23 Mar 2024 14:12:59,911 [main] repository.MeciDBRepository 68 findAll - Enter
+23 Mar 2024 14:12:59,911 [main] repository.MeciDBRepository 69 findAll - Getting a connection with db
+23 Mar 2024 14:12:59,911 [main] repository.MeciDBRepository 72 findAll - Prepare Statement: select * from meciuri
+23 Mar 2024 14:12:59,912 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=1} 
+23 Mar 2024 14:12:59,912 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=2} 
+23 Mar 2024 14:12:59,913 [main] repository.MeciDBRepository 98 findAll - Exit with([Entity{id=1}, Entity{id=2}])
+23 Mar 2024 14:12:59,914 [main] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@205d38da 
+23 Mar 2024 14:12:59,915 [main] repository.BiletDBRepository 36 create - Enter saving bilet Entity{id=null} 
+23 Mar 2024 14:12:59,915 [main] repository.BiletDBRepository 38 create - Getting a connection with db
+23 Mar 2024 14:12:59,916 [main] repository.BiletDBRepository 42 create - Prepare Statement: insert into bilete (id_meci, nume_client, nr_locuri) values (1,Stefan Eminescu,2)
+23 Mar 2024 14:12:59,946 [main] repository.BiletDBRepository 56 create - Saved 1 instances
+23 Mar 2024 14:12:59,946 [main] repository.BiletDBRepository 70 create - Exit with(Entity{id=13})
+23 Mar 2024 14:12:59,946 [main] repository.BiletDBRepository 112 sizeMeci - Enter
+23 Mar 2024 14:12:59,946 [main] repository.BiletDBRepository 114 sizeMeci - Getting a connection with db
+23 Mar 2024 14:12:59,947 [main] repository.BiletDBRepository 117 sizeMeci - Prepare Statement: SELECT COUNT(*) AS numar_bilete FROM bilete WHERE id_meci=1
+23 Mar 2024 14:12:59,948 [main] repository.BiletDBRepository 127 sizeMeci - Numar bilete gasit : 7 
+23 Mar 2024 14:12:59,948 [main] repository.BiletDBRepository 134 sizeMeci - Exit with(7)
+23 Mar 2024 14:13:06,198 [main] repository.AngajatDBRepository 24 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@662b4c69 
+23 Mar 2024 14:13:06,202 [main] repository.AngajatDBRepository 59 findByUsername - Enter
+23 Mar 2024 14:13:06,203 [main] repository.AngajatDBRepository 61 findByUsername - Getting a connection with db
+23 Mar 2024 14:13:06,560 [main] repository.AngajatDBRepository 66 findByUsername - Prepare Statement: select * from angajati where username=ionescu_ion 
+23 Mar 2024 14:13:06,566 [main] repository.AngajatDBRepository 74 findByUsername - Angajat gasit : Entity{id=2} 
+23 Mar 2024 14:13:06,568 [main] repository.AngajatDBRepository 86 findByUsername - Exit with(Entity{id=2})
+23 Mar 2024 14:13:06,570 [main] repository.MeciDBRepository 25 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@928763c 
+23 Mar 2024 14:13:06,571 [main] repository.MeciDBRepository 30 findOne - Enter
+23 Mar 2024 14:13:06,571 [main] repository.MeciDBRepository 32 findOne - Getting a connection with db
+23 Mar 2024 14:13:06,572 [main] repository.MeciDBRepository 37 findOne - Prepare Statement : select * from meciuri where id=1
+23 Mar 2024 14:13:06,587 [main] repository.MeciDBRepository 48 findOne - Meci gasit : Entity{id=1} 
+23 Mar 2024 14:13:06,587 [main] repository.MeciDBRepository 62 findOne - Exit with(Entity{id=1})
+23 Mar 2024 14:13:06,588 [main] repository.MeciDBRepository 68 findAll - Enter
+23 Mar 2024 14:13:06,588 [main] repository.MeciDBRepository 69 findAll - Getting a connection with db
+23 Mar 2024 14:13:06,588 [main] repository.MeciDBRepository 72 findAll - Prepare Statement: select * from meciuri
+23 Mar 2024 14:13:06,589 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=1} 
+23 Mar 2024 14:13:06,590 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=2} 
+23 Mar 2024 14:13:06,590 [main] repository.MeciDBRepository 98 findAll - Exit with([Entity{id=1}, Entity{id=2}])
+23 Mar 2024 14:13:06,591 [main] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@205d38da 
+23 Mar 2024 14:13:06,592 [main] repository.BiletDBRepository 36 create - Enter saving bilet Entity{id=null} 
+23 Mar 2024 14:13:06,592 [main] repository.BiletDBRepository 38 create - Getting a connection with db
+23 Mar 2024 14:13:06,593 [main] repository.BiletDBRepository 42 create - Prepare Statement: insert into bilete (id_meci, nume_client, nr_locuri) values (1,Stefan Eminescu,2)
+23 Mar 2024 14:13:06,621 [main] repository.BiletDBRepository 56 create - Saved 1 instances
+23 Mar 2024 14:13:06,622 [main] repository.BiletDBRepository 70 create - Exit with(Entity{id=14})
+23 Mar 2024 14:13:06,622 [main] repository.BiletDBRepository 112 sizeMeci - Enter
+23 Mar 2024 14:13:06,622 [main] repository.BiletDBRepository 114 sizeMeci - Getting a connection with db
+23 Mar 2024 14:13:06,622 [main] repository.BiletDBRepository 117 sizeMeci - Prepare Statement: SELECT COUNT(*) AS numar_bilete FROM bilete WHERE id_meci=1
+23 Mar 2024 14:13:06,623 [main] repository.BiletDBRepository 127 sizeMeci - Numar bilete gasit : 8 
+23 Mar 2024 14:13:06,623 [main] repository.BiletDBRepository 134 sizeMeci - Exit with(8)
+23 Mar 2024 14:16:55,187 [main] repository.AngajatDBRepository 24 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@662b4c69 
+23 Mar 2024 14:16:55,192 [main] repository.AngajatDBRepository 59 findByUsername - Enter
+23 Mar 2024 14:16:55,192 [main] repository.AngajatDBRepository 61 findByUsername - Getting a connection with db
+23 Mar 2024 14:16:55,629 [main] repository.AngajatDBRepository 66 findByUsername - Prepare Statement: select * from angajati where username=ionescu_ion 
+23 Mar 2024 14:16:55,635 [main] repository.AngajatDBRepository 74 findByUsername - Angajat gasit : Entity{id=2} 
+23 Mar 2024 14:16:55,637 [main] repository.AngajatDBRepository 86 findByUsername - Exit with(Entity{id=2})
+23 Mar 2024 14:16:55,640 [main] repository.MeciDBRepository 25 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@928763c 
+23 Mar 2024 14:16:55,640 [main] repository.MeciDBRepository 30 findOne - Enter
+23 Mar 2024 14:16:55,641 [main] repository.MeciDBRepository 32 findOne - Getting a connection with db
+23 Mar 2024 14:16:55,643 [main] repository.MeciDBRepository 37 findOne - Prepare Statement : select * from meciuri where id=1
+23 Mar 2024 14:16:55,661 [main] repository.MeciDBRepository 48 findOne - Meci gasit : Entity{id=1} 
+23 Mar 2024 14:16:55,662 [main] repository.MeciDBRepository 62 findOne - Exit with(Entity{id=1})
+23 Mar 2024 14:16:55,662 [main] repository.MeciDBRepository 68 findAll - Enter
+23 Mar 2024 14:16:55,662 [main] repository.MeciDBRepository 69 findAll - Getting a connection with db
+23 Mar 2024 14:16:55,663 [main] repository.MeciDBRepository 72 findAll - Prepare Statement: select * from meciuri
+23 Mar 2024 14:16:55,664 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=1} 
+23 Mar 2024 14:16:55,664 [main] repository.MeciDBRepository 83 findAll - Meci gasit : Entity{id=2} 
+23 Mar 2024 14:16:55,664 [main] repository.MeciDBRepository 98 findAll - Exit with([Entity{id=1}, Entity{id=2}])
+23 Mar 2024 14:16:55,667 [main] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@205d38da 
+23 Mar 2024 14:16:55,667 [main] repository.BiletDBRepository 36 create - Enter saving bilet Entity{id=null} 
+23 Mar 2024 14:16:55,668 [main] repository.BiletDBRepository 38 create - Getting a connection with db
+23 Mar 2024 14:16:55,670 [main] repository.BiletDBRepository 42 create - Prepare Statement: insert into bilete (id_meci, nume_client, nr_locuri) values (1,Stefan Eminescu,2)
+23 Mar 2024 14:16:55,695 [main] repository.BiletDBRepository 56 create - Saved 1 instances
+23 Mar 2024 14:16:55,695 [main] repository.BiletDBRepository 70 create - Exit with(Entity{id=15})
+23 Mar 2024 14:16:55,695 [main] repository.BiletDBRepository 112 nrLocuriOcupateMeci - Enter
+23 Mar 2024 14:16:55,695 [main] repository.BiletDBRepository 114 nrLocuriOcupateMeci - Getting a connection with db
+23 Mar 2024 14:16:55,696 [main] repository.BiletDBRepository 117 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+23 Mar 2024 14:16:55,696 [main] repository.BiletDBRepository 127 nrLocuriOcupateMeci - Numar bilete gasit : 20 
+23 Mar 2024 14:16:55,697 [main] repository.BiletDBRepository 134 nrLocuriOcupateMeci - Exit with(20)
+23 Mar 2024 15:01:22,934 [main] repository.AngajatDBRepository 22 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@662b4c69 
+23 Mar 2024 15:01:22,942 [main] repository.AngajatDBRepository 57 findByUsername - Enter
+23 Mar 2024 15:01:22,943 [main] repository.AngajatDBRepository 59 findByUsername - Getting a connection with db
+23 Mar 2024 15:01:23,598 [main] repository.AngajatDBRepository 64 findByUsername - Prepare Statement: select * from angajati where username=ionescu_ion 
+23 Mar 2024 15:01:23,617 [main] repository.AngajatDBRepository 72 findByUsername - Angajat gasit : Entity{id=2} 
+23 Mar 2024 15:01:23,621 [main] repository.AngajatDBRepository 84 findByUsername - Exit with(Entity{id=2})
+23 Mar 2024 15:01:23,623 [main] repository.MeciDBRepository 24 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@928763c 
+23 Mar 2024 15:01:23,624 [main] repository.MeciDBRepository 29 findOne - Enter
+23 Mar 2024 15:01:23,624 [main] repository.MeciDBRepository 31 findOne - Getting a connection with db
+23 Mar 2024 15:01:23,626 [main] repository.MeciDBRepository 36 findOne - Prepare Statement : select * from meciuri where id=1
+23 Mar 2024 15:01:23,644 [main] repository.MeciDBRepository 47 findOne - Meci gasit : Entity{id=1} 
+23 Mar 2024 15:01:23,645 [main] repository.MeciDBRepository 61 findOne - Exit with(Entity{id=1})
+23 Mar 2024 15:01:23,645 [main] repository.MeciDBRepository 103 findMeciuriDisponibile - Enter
+23 Mar 2024 15:01:23,645 [main] repository.MeciDBRepository 104 findMeciuriDisponibile - Getting a connection with db
+23 Mar 2024 15:01:23,646 [main] repository.MeciDBRepository 107 findMeciuriDisponibile - Prepare Statement: SELECT m.id, m.nume, m.pret_bilet, m.capacitate, m.data
+FROM meciuri m
+         LEFT JOIN (
+    SELECT id_meci, SUM(nr_locuri) AS total_locuri
+    FROM bilete
+    GROUP BY id_meci
+) b ON m.id = b.id_meci
+WHERE total_locuri < m.capacitate OR total_locuri IS NULL
+ORDER BY CASE WHEN total_locuri IS NULL THEN 0 ELSE 1 END;
+23 Mar 2024 15:01:23,647 [main] repository.MeciDBRepository 134 findMeciuriDisponibile - Meci gasit : Entity{id=3} 
+23 Mar 2024 15:01:23,648 [main] repository.MeciDBRepository 134 findMeciuriDisponibile - Meci gasit : Entity{id=1} 
+23 Mar 2024 15:01:23,649 [main] repository.MeciDBRepository 149 findMeciuriDisponibile - Exit with([Entity{id=3}, Entity{id=1}])
+23 Mar 2024 15:01:23,652 [main] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@6dd7b5a3 
+23 Mar 2024 15:01:23,652 [main] repository.BiletDBRepository 36 save - Enter saving bilet Entity{id=null} 
+23 Mar 2024 15:01:23,652 [main] repository.BiletDBRepository 38 save - Getting a connection with db
+23 Mar 2024 15:01:23,654 [main] repository.BiletDBRepository 42 save - Prepare Statement: insert into bilete (id_meci, nume_client, nr_locuri) values (1,Stefan Eminescu,2)
+23 Mar 2024 15:01:23,680 [main] repository.BiletDBRepository 56 save - Saved 1 instances
+23 Mar 2024 15:01:23,681 [main] repository.BiletDBRepository 70 save - Exit with(Entity{id=17})
+23 Mar 2024 15:01:23,681 [main] repository.BiletDBRepository 112 nrLocuriOcupateMeci - Enter
+23 Mar 2024 15:01:23,681 [main] repository.BiletDBRepository 114 nrLocuriOcupateMeci - Getting a connection with db
+23 Mar 2024 15:01:23,682 [main] repository.BiletDBRepository 117 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+23 Mar 2024 15:01:23,682 [main] repository.BiletDBRepository 127 nrLocuriOcupateMeci - Numar bilete gasit : 22 
+23 Mar 2024 15:01:23,683 [main] repository.BiletDBRepository 134 nrLocuriOcupateMeci - Exit with(22)
+23 Mar 2024 16:04:54,289 [main] repository.AngajatDBRepository 22 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@741a8937 
+23 Mar 2024 16:04:54,294 [main] repository.AngajatDBRepository 57 findByUsername - Enter
+23 Mar 2024 16:04:54,294 [main] repository.AngajatDBRepository 59 findByUsername - Getting a connection with db
+23 Mar 2024 16:04:55,290 [main] repository.AngajatDBRepository 64 findByUsername - Prepare Statement: select * from angajati where username=ionescu_ion 
+23 Mar 2024 16:04:55,305 [main] repository.AngajatDBRepository 72 findByUsername - Angajat gasit : Entity{id=2} 
+23 Mar 2024 16:04:55,307 [main] repository.AngajatDBRepository 84 findByUsername - Exit with(Entity{id=2})
+23 Mar 2024 16:04:55,316 [main] repository.MeciDBRepository 24 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@479cbee5 
+23 Mar 2024 16:04:55,317 [main] repository.MeciDBRepository 29 findOne - Enter
+23 Mar 2024 16:04:55,317 [main] repository.MeciDBRepository 31 findOne - Getting a connection with db
+23 Mar 2024 16:04:55,319 [main] repository.MeciDBRepository 36 findOne - Prepare Statement : select * from meciuri where id=1
+23 Mar 2024 16:04:55,326 [main] repository.MeciDBRepository 47 findOne - Meci gasit : Entity{id=1} 
+23 Mar 2024 16:04:55,326 [main] repository.MeciDBRepository 61 findOne - Exit with(Entity{id=1})
+23 Mar 2024 16:04:55,326 [main] repository.MeciDBRepository 103 findMeciuriDisponibile - Enter
+23 Mar 2024 16:04:55,327 [main] repository.MeciDBRepository 104 findMeciuriDisponibile - Getting a connection with db
+23 Mar 2024 16:04:55,327 [main] repository.MeciDBRepository 107 findMeciuriDisponibile - Prepare Statement: SELECT m.id, m.nume, m.pret_bilet, m.capacitate, m.data
+FROM meciuri m
+         LEFT JOIN (
+    SELECT id_meci, SUM(nr_locuri) AS total_locuri
+    FROM bilete
+    GROUP BY id_meci
+) b ON m.id = b.id_meci
+WHERE total_locuri < m.capacitate OR total_locuri IS NULL
+ORDER BY CASE WHEN total_locuri IS NULL THEN 0 ELSE 1 END;
+23 Mar 2024 16:04:55,328 [main] repository.MeciDBRepository 134 findMeciuriDisponibile - Meci gasit : Entity{id=3} 
+23 Mar 2024 16:04:55,329 [main] repository.MeciDBRepository 134 findMeciuriDisponibile - Meci gasit : Entity{id=1} 
+23 Mar 2024 16:04:55,329 [main] repository.MeciDBRepository 149 findMeciuriDisponibile - Exit with([Entity{id=3}, Entity{id=1}])
+23 Mar 2024 16:04:55,333 [main] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@79c97cb 
+23 Mar 2024 16:04:55,333 [main] repository.BiletDBRepository 36 save - Enter saving bilet Entity{id=null} 
+23 Mar 2024 16:04:55,333 [main] repository.BiletDBRepository 38 save - Getting a connection with db
+23 Mar 2024 16:04:55,334 [main] repository.BiletDBRepository 42 save - Prepare Statement: insert into bilete (id_meci, nume_client, nr_locuri) values (1,Stefan Eminescu,2)
+23 Mar 2024 16:04:55,385 [main] repository.BiletDBRepository 56 save - Saved 1 instances
+23 Mar 2024 16:04:55,385 [main] repository.BiletDBRepository 70 save - Exit with(Entity{id=18})
+23 Mar 2024 16:04:55,385 [main] repository.BiletDBRepository 112 nrLocuriOcupateMeci - Enter
+23 Mar 2024 16:04:55,385 [main] repository.BiletDBRepository 114 nrLocuriOcupateMeci - Getting a connection with db
+23 Mar 2024 16:04:55,386 [main] repository.BiletDBRepository 117 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+23 Mar 2024 16:04:55,386 [main] repository.BiletDBRepository 127 nrLocuriOcupateMeci - Numar bilete gasit : 24 
+23 Mar 2024 16:04:55,387 [main] repository.BiletDBRepository 134 nrLocuriOcupateMeci - Exit with(24)
+23 Mar 2024 16:44:58,071 [JavaFX Application Thread] repository.AngajatDBRepository 22 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@4632dcbd 
+23 Mar 2024 16:44:58,078 [JavaFX Application Thread] repository.MeciDBRepository 24 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@1b630716 
+23 Mar 2024 16:44:58,081 [JavaFX Application Thread] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@43592895 
+23 Mar 2024 16:52:24,876 [JavaFX Application Thread] repository.AngajatDBRepository 22 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@3138547b 
+23 Mar 2024 16:52:24,886 [JavaFX Application Thread] repository.MeciDBRepository 24 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@3067f54d 
+23 Mar 2024 16:52:24,888 [JavaFX Application Thread] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@63fa183b 
+23 Mar 2024 16:53:24,616 [JavaFX Application Thread] repository.AngajatDBRepository 22 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@3138547b 
+23 Mar 2024 16:53:24,629 [JavaFX Application Thread] repository.MeciDBRepository 24 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@3067f54d 
+23 Mar 2024 16:53:24,633 [JavaFX Application Thread] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@63fa183b 
+23 Mar 2024 16:53:39,453 [JavaFX Application Thread] repository.AngajatDBRepository 57 findByUsername - Enter
+23 Mar 2024 16:53:39,453 [JavaFX Application Thread] repository.AngajatDBRepository 59 findByUsername - Getting a connection with db
+23 Mar 2024 16:53:40,071 [JavaFX Application Thread] repository.AngajatDBRepository 64 findByUsername - Prepare Statement: select * from angajati where username=ana_maria 
+23 Mar 2024 16:53:40,076 [JavaFX Application Thread] repository.AngajatDBRepository 84 findByUsername - Exit
+23 Mar 2024 16:54:24,822 [JavaFX Application Thread] repository.AngajatDBRepository 22 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@3138547b 
+23 Mar 2024 16:54:24,835 [JavaFX Application Thread] repository.MeciDBRepository 24 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@3067f54d 
+23 Mar 2024 16:54:24,838 [JavaFX Application Thread] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@63fa183b 
+23 Mar 2024 16:55:53,814 [JavaFX Application Thread] repository.AngajatDBRepository 22 <init> - Initializing AngajatDBRepository with DBUtils: utils.JdbcUtils@42b16a65 
+23 Mar 2024 16:55:53,823 [JavaFX Application Thread] repository.MeciDBRepository 24 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@3594aa64 
+23 Mar 2024 16:55:53,825 [JavaFX Application Thread] repository.BiletDBRepository 21 <init> - Initializing MeciDBRepository with DBUtils: utils.JdbcUtils@54bd3d25 
+23 Mar 2024 16:56:07,153 [JavaFX Application Thread] repository.AngajatDBRepository 57 findByUsername - Enter
+23 Mar 2024 16:56:07,154 [JavaFX Application Thread] repository.AngajatDBRepository 59 findByUsername - Getting a connection with db
+23 Mar 2024 16:56:07,604 [JavaFX Application Thread] repository.AngajatDBRepository 64 findByUsername - Prepare Statement: select * from angajati where username=popescu_maria 
+23 Mar 2024 16:56:07,609 [JavaFX Application Thread] repository.AngajatDBRepository 72 findByUsername - Angajat gasit : Entity{id=1} 
+23 Mar 2024 16:56:07,611 [JavaFX Application Thread] repository.AngajatDBRepository 84 findByUsername - Exit with(Entity{id=1})
+23 Mar 2024 16:56:09,048 [JavaFX Application Thread] repository.AngajatDBRepository 57 findByUsername - Enter
+23 Mar 2024 16:56:09,048 [JavaFX Application Thread] repository.AngajatDBRepository 59 findByUsername - Getting a connection with db
+23 Mar 2024 16:56:09,049 [JavaFX Application Thread] repository.AngajatDBRepository 64 findByUsername - Prepare Statement: select * from angajati where username=popescu_maria 
+23 Mar 2024 16:56:09,049 [JavaFX Application Thread] repository.AngajatDBRepository 72 findByUsername - Angajat gasit : Entity{id=1} 
+23 Mar 2024 16:56:09,050 [JavaFX Application Thread] repository.AngajatDBRepository 84 findByUsername - Exit with(Entity{id=1})

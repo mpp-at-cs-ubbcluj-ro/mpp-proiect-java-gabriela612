@@ -14,8 +14,13 @@
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.23.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.23.0" level="project" />
     <orderEntry type="library" name="Gradle: org.xerial:sqlite-jdbc:3.45.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.2.6" level="project" />
-    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.36" level="project" />
+    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.4.14" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:2.0.7" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-fxml:win:17" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-controls:win:23-ea+3" level="project" />
+    <orderEntry type="library" name="Gradle: org.controlsfx:controlsfx:11.1.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.dlsc.formsfx:formsfx-core:11.5.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter:5.9.1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.guava:failureaccess:1.0.2" level="project" />
     <orderEntry type="library" name="Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
@@ -23,9 +28,11 @@
     <orderEntry type="library" name="Gradle: org.checkerframework:checker-qual:3.41.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.errorprone:error_prone_annotations:2.23.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.j2objc:j2objc-annotations:2.8" level="project" />
-    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.2.6" level="project" />
+    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.4.14" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-graphics:win:23-ea+3" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-params:5.9.1" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.9.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openjfx:javafx-base:win:23-ea+3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apiguardian:apiguardian-api:1.1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.9.1" level="project" />
     <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.2.0" level="project" />
