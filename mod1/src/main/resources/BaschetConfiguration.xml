@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties id="jdbcProps1">
+<!--        <prop key="tasks.jdbc.driver">org.sqlite.JDBC</prop>-->
+        <prop key="tasks.jdbc.url">jdbc:sqlite:C:/Users/gabig/Desktop/Javra/mpp-proiect-java-gabriela612/baschet</prop>
+    </util:properties>
+    <util:properties id="jdbcProps" location="classpath:bd.config"/>
+
+    <bean id="angajatRepository" class="pachet.repository.AngajatDBRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="meciRepository" class="pachet.repository.MeciDBRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+    <bean id="biletRepository" class="pachet.repository.BiletDBRepository">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+
+
+</beans>

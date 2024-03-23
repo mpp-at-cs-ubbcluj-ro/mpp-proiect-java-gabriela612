@@ -1,6 +1,7 @@
 package pachet;
 
 import javafx.scene.control.Alert;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import pachet.gui.LoginController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,11 +10,15 @@ import javafx.stage.Stage;
 import pachet.repository.*;
 
 import pachet.service.Service;
+import pachet.utils.BaschetConfig;
 import pachet.utils.MessageBox;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Start extends Application {
     public static void main(String[] args) {
@@ -30,12 +35,9 @@ public class Start extends Application {
             System.out.println("Cannot find bd.config "+e);
         }
 
-
-        IAngajatRepository angajatRepository = new AngajatDBRepository(props);
-        IMeciRepository meciRepository = new MeciDBRepository(props);
-        IBiletRepository biletRepository = new BiletDBRepository(props);
-
-        Service service = new Service(angajatRepository, meciRepository, biletRepository);
+        ApplicationContext context = new
+                AnnotationConfigApplicationContext(BaschetConfig.class);
+        Service service = context.getBean(Service.class);
 
         FXMLLoader fxmlLoader = new FXMLLoader(Start.class.getResource("gui/login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
@@ -43,6 +45,7 @@ public class Start extends Application {
         loginController.setService(service, stage);
         stage.setTitle("Hello!");
         stage.setScene(scene);
+
         stage.show();
     }
 }

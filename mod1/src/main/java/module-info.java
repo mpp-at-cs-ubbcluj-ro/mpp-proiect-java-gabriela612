@@ -7,6 +7,7 @@ module mod1.main {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires org.apache.logging.log4j;
+    requires spring.context;
 
     opens pachet.service to javafx.fxml, javafx.base;
     exports pachet.service;
