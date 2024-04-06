@@ -1,0 +1,658 @@
+07 Apr 2024 01:11:30,039 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 23 <init> - Initializing AngajatDBRepository with DBUtils: org.example.utils.JdbcUtils@7640a618 
+07 Apr 2024 01:11:35,098 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 58 findByUsername - Enter
+07 Apr 2024 01:11:35,099 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 60 findByUsername - Getting a connection with db
+07 Apr 2024 01:11:35,641 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 65 findByUsername - Prepare Statement: select * from angajati where username=test 
+07 Apr 2024 01:11:35,644 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 73 findByUsername - Angajat gasit : Entity{id=3} 
+07 Apr 2024 01:11:35,646 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 85 findByUsername - Exit with(Entity{id=3})
+07 Apr 2024 01:14:59,421 [JavaFX Application Thread] org.example.repository.MeciDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@7f3b09c 
+07 Apr 2024 01:14:59,429 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 23 <init> - Initializing AngajatDBRepository with DBUtils: org.example.utils.JdbcUtils@248b48a5 
+07 Apr 2024 01:14:59,431 [JavaFX Application Thread] org.example.repository.BiletDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@5835e10d 
+07 Apr 2024 01:15:05,464 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 58 findByUsername - Enter
+07 Apr 2024 01:15:05,465 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 60 findByUsername - Getting a connection with db
+07 Apr 2024 01:15:06,032 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 65 findByUsername - Prepare Statement: select * from angajati where username=test 
+07 Apr 2024 01:15:06,039 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 73 findByUsername - Angajat gasit : Entity{id=3} 
+07 Apr 2024 01:15:06,041 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 85 findByUsername - Exit with(Entity{id=3})
+07 Apr 2024 01:15:06,109 [JavaFX Application Thread] org.example.repository.MeciDBRepository 66 findAll - Enter
+07 Apr 2024 01:15:06,110 [JavaFX Application Thread] org.example.repository.MeciDBRepository 67 findAll - Getting a connection with db
+07 Apr 2024 01:15:06,111 [JavaFX Application Thread] org.example.repository.MeciDBRepository 70 findAll - Prepare Statement: select * from meciuri
+07 Apr 2024 01:15:06,117 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=1} 
+07 Apr 2024 01:15:06,117 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=2} 
+07 Apr 2024 01:15:06,118 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=3} 
+07 Apr 2024 01:15:06,118 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=4} 
+07 Apr 2024 01:15:06,118 [JavaFX Application Thread] org.example.repository.MeciDBRepository 96 findAll - Exit with([Entity{id=1}, Entity{id=2}, Entity{id=3}, Entity{id=4}])
+07 Apr 2024 01:15:06,204 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,205 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,207 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:06,208 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:06,209 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:06,262 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,263 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,263 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:15:06,264 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:15:06,265 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:15:06,268 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,269 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,269 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:15:06,270 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:15:06,270 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:15:06,370 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,370 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,371 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:06,372 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:06,373 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:06,374 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,375 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,375 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:06,376 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:06,377 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:06,380 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,380 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,381 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:06,381 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:06,382 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:06,383 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,383 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,383 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:06,384 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:06,385 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:06,389 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,390 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,390 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:06,391 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:06,391 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:06,402 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,403 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,403 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:15:06,404 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:15:06,405 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:15:06,414 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,415 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,415 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:06,416 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:06,416 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:06,432 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:06,433 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:06,434 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:06,435 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:06,436 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:10,103 [JavaFX Application Thread] org.example.repository.MeciDBRepository 102 findMeciuriDisponibile - Enter
+07 Apr 2024 01:15:10,103 [JavaFX Application Thread] org.example.repository.MeciDBRepository 103 findMeciuriDisponibile - Getting a connection with db
+07 Apr 2024 01:15:10,103 [JavaFX Application Thread] org.example.repository.MeciDBRepository 106 findMeciuriDisponibile - Prepare Statement: SELECT m.id, m.nume, m.pret_bilet, m.capacitate, m.data
+FROM meciuri m
+         LEFT JOIN (
+    SELECT id_meci, SUM(nr_locuri) AS total_locuri
+    FROM bilete
+    GROUP BY id_meci
+) b ON m.id = b.id_meci
+WHERE total_locuri < m.capacitate OR total_locuri IS NULL
+ORDER BY CASE WHEN total_locuri IS NULL THEN 0 ELSE 1 END;
+07 Apr 2024 01:15:10,105 [JavaFX Application Thread] org.example.repository.MeciDBRepository 133 findMeciuriDisponibile - Meci gasit : Entity{id=3} 
+07 Apr 2024 01:15:10,106 [JavaFX Application Thread] org.example.repository.MeciDBRepository 133 findMeciuriDisponibile - Meci gasit : Entity{id=1} 
+07 Apr 2024 01:15:10,106 [JavaFX Application Thread] org.example.repository.MeciDBRepository 133 findMeciuriDisponibile - Meci gasit : Entity{id=4} 
+07 Apr 2024 01:15:10,107 [JavaFX Application Thread] org.example.repository.MeciDBRepository 148 findMeciuriDisponibile - Exit with([Entity{id=3}, Entity{id=1}, Entity{id=4}])
+07 Apr 2024 01:15:10,113 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,113 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,114 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:10,114 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:10,114 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:10,115 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,116 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,116 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:10,116 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:10,117 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:10,119 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,120 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,120 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:10,120 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:10,120 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:10,121 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,121 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,121 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:10,122 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:10,122 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:10,124 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,124 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,125 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:10,125 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:10,126 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:10,126 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,126 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,127 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:10,128 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:10,128 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:10,131 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,132 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,132 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:10,133 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:10,134 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:10,136 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,136 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,136 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:10,138 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:10,138 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:10,138 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,139 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,139 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:10,139 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:10,139 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:10,140 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,141 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,141 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:10,142 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:10,142 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:10,143 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,143 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,143 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:10,144 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:10,144 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:10,145 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:10,145 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:10,145 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:10,146 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:10,146 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:11,577 [JavaFX Application Thread] org.example.repository.MeciDBRepository 66 findAll - Enter
+07 Apr 2024 01:15:11,577 [JavaFX Application Thread] org.example.repository.MeciDBRepository 67 findAll - Getting a connection with db
+07 Apr 2024 01:15:11,577 [JavaFX Application Thread] org.example.repository.MeciDBRepository 70 findAll - Prepare Statement: select * from meciuri
+07 Apr 2024 01:15:11,578 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=1} 
+07 Apr 2024 01:15:11,579 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=2} 
+07 Apr 2024 01:15:11,579 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=3} 
+07 Apr 2024 01:15:11,580 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=4} 
+07 Apr 2024 01:15:11,580 [JavaFX Application Thread] org.example.repository.MeciDBRepository 96 findAll - Exit with([Entity{id=1}, Entity{id=2}, Entity{id=3}, Entity{id=4}])
+07 Apr 2024 01:15:11,584 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,584 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,585 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:11,585 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:11,585 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:11,586 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,586 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,586 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:11,586 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:11,587 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:11,587 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,587 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,588 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:15:11,588 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:15:11,588 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:15:11,589 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,589 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,590 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:15:11,590 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:15:11,590 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:15:11,591 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,591 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,591 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:11,592 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:11,592 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:11,592 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,593 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,593 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:11,593 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:11,593 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:11,594 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,594 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,594 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:11,595 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:11,595 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:11,596 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,596 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,596 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:11,597 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:11,597 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:11,599 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,600 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,600 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:11,604 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:11,604 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:11,605 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,605 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,605 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:11,606 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:11,606 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:11,607 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,607 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,607 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:15:11,608 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:15:11,608 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:15:11,609 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,609 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,609 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:15:11,609 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:15:11,610 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:15:11,610 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,610 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,611 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:11,611 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:11,612 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:11,613 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,613 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,614 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:11,614 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:11,614 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:11,615 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,615 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,616 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:11,616 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:11,617 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:11,618 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:11,618 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:11,618 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:11,619 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:11,619 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:30,701 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:30,701 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:30,701 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:30,702 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 46 
+07 Apr 2024 01:15:30,702 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(46)
+07 Apr 2024 01:15:30,703 [JavaFX Application Thread] org.example.repository.BiletDBRepository 38 save - Enter saving bilet Entity{id=null} 
+07 Apr 2024 01:15:30,703 [JavaFX Application Thread] org.example.repository.BiletDBRepository 40 save - Getting a connection with db
+07 Apr 2024 01:15:30,704 [JavaFX Application Thread] org.example.repository.BiletDBRepository 44 save - Prepare Statement: insert into bilete (id_meci, nume_client, nr_locuri) values (1,george,4)
+07 Apr 2024 01:15:30,729 [JavaFX Application Thread] org.example.repository.BiletDBRepository 58 save - Saved 1 instances
+07 Apr 2024 01:15:30,730 [JavaFX Application Thread] org.example.repository.BiletDBRepository 72 save - Exit with(Entity{id=24})
+07 Apr 2024 01:15:30,730 [JavaFX Application Thread] org.example.repository.MeciDBRepository 66 findAll - Enter
+07 Apr 2024 01:15:30,731 [JavaFX Application Thread] org.example.repository.MeciDBRepository 67 findAll - Getting a connection with db
+07 Apr 2024 01:15:30,731 [JavaFX Application Thread] org.example.repository.MeciDBRepository 70 findAll - Prepare Statement: select * from meciuri
+07 Apr 2024 01:15:30,732 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=1} 
+07 Apr 2024 01:15:30,733 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=2} 
+07 Apr 2024 01:15:30,733 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=3} 
+07 Apr 2024 01:15:30,734 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=4} 
+07 Apr 2024 01:15:30,734 [JavaFX Application Thread] org.example.repository.MeciDBRepository 96 findAll - Exit with([Entity{id=1}, Entity{id=2}, Entity{id=3}, Entity{id=4}])
+07 Apr 2024 01:15:30,852 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:30,852 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:30,853 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:30,853 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:15:30,854 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:15:30,855 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:30,855 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:30,855 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:15:30,856 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:15:30,856 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:15:30,857 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:30,858 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:30,858 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:15:30,859 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:15:30,859 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:15:30,860 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:30,861 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:30,861 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:15:30,862 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:15:30,862 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:15:30,863 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:30,863 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:30,863 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:30,864 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:30,864 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:30,867 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:30,867 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:30,868 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:15:30,868 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:15:30,869 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:15:30,870 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:30,870 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:30,870 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:30,871 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:30,871 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:15:30,872 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:15:30,872 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:15:30,873 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:15:30,874 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:15:30,874 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:17:40,049 [JavaFX Application Thread] org.example.repository.MeciDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@6abf3168 
+07 Apr 2024 01:17:40,056 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 23 <init> - Initializing AngajatDBRepository with DBUtils: org.example.utils.JdbcUtils@54a5c6ac 
+07 Apr 2024 01:17:40,058 [JavaFX Application Thread] org.example.repository.BiletDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@1f18a0ce 
+07 Apr 2024 01:17:44,746 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 58 findByUsername - Enter
+07 Apr 2024 01:17:44,747 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 60 findByUsername - Getting a connection with db
+07 Apr 2024 01:18:16,832 [JavaFX Application Thread] org.example.repository.MeciDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@7f3b09c 
+07 Apr 2024 01:18:16,839 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 23 <init> - Initializing AngajatDBRepository with DBUtils: org.example.utils.JdbcUtils@248b48a5 
+07 Apr 2024 01:18:16,841 [JavaFX Application Thread] org.example.repository.BiletDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@5835e10d 
+07 Apr 2024 01:18:21,672 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 58 findByUsername - Enter
+07 Apr 2024 01:18:21,673 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 60 findByUsername - Getting a connection with db
+07 Apr 2024 01:18:22,431 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 65 findByUsername - Prepare Statement: select * from angajati where username=test 
+07 Apr 2024 01:18:22,436 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 73 findByUsername - Angajat gasit : Entity{id=3} 
+07 Apr 2024 01:18:22,438 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 85 findByUsername - Exit with(Entity{id=3})
+07 Apr 2024 01:18:22,511 [JavaFX Application Thread] org.example.repository.MeciDBRepository 66 findAll - Enter
+07 Apr 2024 01:18:22,512 [JavaFX Application Thread] org.example.repository.MeciDBRepository 67 findAll - Getting a connection with db
+07 Apr 2024 01:18:22,513 [JavaFX Application Thread] org.example.repository.MeciDBRepository 70 findAll - Prepare Statement: select * from meciuri
+07 Apr 2024 01:18:22,520 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=1} 
+07 Apr 2024 01:18:22,521 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=2} 
+07 Apr 2024 01:18:22,522 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=3} 
+07 Apr 2024 01:18:22,522 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=4} 
+07 Apr 2024 01:18:22,523 [JavaFX Application Thread] org.example.repository.MeciDBRepository 96 findAll - Exit with([Entity{id=1}, Entity{id=2}, Entity{id=3}, Entity{id=4}])
+07 Apr 2024 01:18:22,614 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,614 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,616 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:18:22,617 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:18:22,617 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:18:22,668 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,668 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,669 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:18:22,669 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:18:22,670 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:18:22,674 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,675 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,675 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:18:22,676 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:18:22,676 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:18:22,774 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,774 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,775 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:18:22,776 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:18:22,776 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:18:22,777 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,778 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,778 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:18:22,779 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:18:22,779 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:18:22,782 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,783 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,783 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:18:22,784 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:18:22,784 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:18:22,786 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,786 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,788 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:18:22,789 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:18:22,789 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:18:22,793 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,793 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,794 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:18:22,794 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:18:22,795 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:18:22,807 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,808 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,808 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:18:22,809 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:18:22,810 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:18:22,823 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,825 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,825 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:18:22,826 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:18:22,826 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:18:22,839 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:18:22,839 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:18:22,840 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:18:22,840 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:18:22,841 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:19:07,639 [JavaFX Application Thread] org.example.repository.MeciDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@7f3b09c 
+07 Apr 2024 01:19:07,647 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 23 <init> - Initializing AngajatDBRepository with DBUtils: org.example.utils.JdbcUtils@248b48a5 
+07 Apr 2024 01:19:07,649 [JavaFX Application Thread] org.example.repository.BiletDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@5835e10d 
+07 Apr 2024 01:19:12,987 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 58 findByUsername - Enter
+07 Apr 2024 01:19:12,987 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 60 findByUsername - Getting a connection with db
+07 Apr 2024 01:19:13,329 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 65 findByUsername - Prepare Statement: select * from angajati where username=test 
+07 Apr 2024 01:19:13,333 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 73 findByUsername - Angajat gasit : Entity{id=3} 
+07 Apr 2024 01:19:13,334 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 85 findByUsername - Exit with(Entity{id=3})
+07 Apr 2024 01:19:13,413 [JavaFX Application Thread] org.example.repository.MeciDBRepository 66 findAll - Enter
+07 Apr 2024 01:19:13,413 [JavaFX Application Thread] org.example.repository.MeciDBRepository 67 findAll - Getting a connection with db
+07 Apr 2024 01:19:13,415 [JavaFX Application Thread] org.example.repository.MeciDBRepository 70 findAll - Prepare Statement: select * from meciuri
+07 Apr 2024 01:19:13,423 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=1} 
+07 Apr 2024 01:19:13,423 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=2} 
+07 Apr 2024 01:19:13,424 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=3} 
+07 Apr 2024 01:19:13,424 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=4} 
+07 Apr 2024 01:19:13,424 [JavaFX Application Thread] org.example.repository.MeciDBRepository 96 findAll - Exit with([Entity{id=1}, Entity{id=2}, Entity{id=3}, Entity{id=4}])
+07 Apr 2024 01:19:13,521 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,521 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,523 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:19:13,524 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:19:13,525 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:19:13,576 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,577 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,577 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:19:13,578 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:19:13,578 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:19:13,582 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,582 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,582 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:19:13,583 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:19:13,584 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:19:13,679 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,680 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,680 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:19:13,681 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:19:13,681 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:19:13,682 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,683 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,683 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:19:13,684 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:19:13,684 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:19:13,686 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,686 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,687 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:19:13,688 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:19:13,688 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:19:13,690 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,690 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,691 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:19:13,691 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:19:13,692 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:19:13,696 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,696 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,697 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:19:13,698 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:19:13,698 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:19:13,709 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,710 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,710 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:19:13,711 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:19:13,712 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:19:13,721 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,721 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,722 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:19:13,723 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:19:13,723 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:19:13,741 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:13,742 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:13,742 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:19:13,742 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:19:13,743 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:19:30,514 [JavaFX Application Thread] org.example.repository.MeciDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@7f3b09c 
+07 Apr 2024 01:19:30,520 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 23 <init> - Initializing AngajatDBRepository with DBUtils: org.example.utils.JdbcUtils@248b48a5 
+07 Apr 2024 01:19:30,521 [JavaFX Application Thread] org.example.repository.BiletDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@5835e10d 
+07 Apr 2024 01:19:35,158 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 58 findByUsername - Enter
+07 Apr 2024 01:19:35,159 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 60 findByUsername - Getting a connection with db
+07 Apr 2024 01:19:35,484 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 65 findByUsername - Prepare Statement: select * from angajati where username=test 
+07 Apr 2024 01:19:35,490 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 73 findByUsername - Angajat gasit : Entity{id=3} 
+07 Apr 2024 01:19:35,491 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 85 findByUsername - Exit with(Entity{id=3})
+07 Apr 2024 01:19:35,554 [JavaFX Application Thread] org.example.repository.MeciDBRepository 66 findAll - Enter
+07 Apr 2024 01:19:35,555 [JavaFX Application Thread] org.example.repository.MeciDBRepository 67 findAll - Getting a connection with db
+07 Apr 2024 01:19:35,557 [JavaFX Application Thread] org.example.repository.MeciDBRepository 70 findAll - Prepare Statement: select * from meciuri
+07 Apr 2024 01:19:35,564 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=1} 
+07 Apr 2024 01:19:35,564 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=2} 
+07 Apr 2024 01:19:35,565 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=3} 
+07 Apr 2024 01:19:35,565 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=4} 
+07 Apr 2024 01:19:35,565 [JavaFX Application Thread] org.example.repository.MeciDBRepository 96 findAll - Exit with([Entity{id=1}, Entity{id=2}, Entity{id=3}, Entity{id=4}])
+07 Apr 2024 01:19:35,650 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,650 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,652 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:19:35,653 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:19:35,654 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:19:35,708 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,709 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,709 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:19:35,710 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:19:35,711 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:19:35,714 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,715 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,715 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:19:35,716 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:19:35,716 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:19:35,817 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,817 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,817 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:19:35,818 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:19:35,819 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:19:35,821 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,821 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,822 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:19:35,822 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:19:35,823 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:19:35,825 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,825 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,826 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:19:35,826 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:19:35,826 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:19:35,828 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,828 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,828 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:19:35,829 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:19:35,829 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:19:35,833 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,834 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,834 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:19:35,834 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:19:35,835 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:19:35,847 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,847 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,847 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:19:35,848 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:19:35,848 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:19:35,859 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,859 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,859 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:19:35,860 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:19:35,861 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:19:35,872 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:19:35,872 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:19:35,873 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:19:35,874 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:19:35,874 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:19:58,704 [JavaFX Application Thread] org.example.repository.MeciDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@7f3b09c 
+07 Apr 2024 01:19:58,709 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 23 <init> - Initializing AngajatDBRepository with DBUtils: org.example.utils.JdbcUtils@248b48a5 
+07 Apr 2024 01:19:58,711 [JavaFX Application Thread] org.example.repository.BiletDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@5835e10d 
+07 Apr 2024 01:20:03,985 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 58 findByUsername - Enter
+07 Apr 2024 01:20:03,987 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 60 findByUsername - Getting a connection with db
+07 Apr 2024 01:20:04,338 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 65 findByUsername - Prepare Statement: select * from angajati where username=test 
+07 Apr 2024 01:20:04,342 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 73 findByUsername - Angajat gasit : Entity{id=3} 
+07 Apr 2024 01:20:04,343 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 85 findByUsername - Exit with(Entity{id=3})
+07 Apr 2024 01:20:04,408 [JavaFX Application Thread] org.example.repository.MeciDBRepository 66 findAll - Enter
+07 Apr 2024 01:20:04,408 [JavaFX Application Thread] org.example.repository.MeciDBRepository 67 findAll - Getting a connection with db
+07 Apr 2024 01:20:04,410 [JavaFX Application Thread] org.example.repository.MeciDBRepository 70 findAll - Prepare Statement: select * from meciuri
+07 Apr 2024 01:20:04,417 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=1} 
+07 Apr 2024 01:20:04,417 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=2} 
+07 Apr 2024 01:20:04,418 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=3} 
+07 Apr 2024 01:20:04,418 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=4} 
+07 Apr 2024 01:20:04,418 [JavaFX Application Thread] org.example.repository.MeciDBRepository 96 findAll - Exit with([Entity{id=1}, Entity{id=2}, Entity{id=3}, Entity{id=4}])
+07 Apr 2024 01:20:04,496 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,496 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,497 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:20:04,498 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:20:04,499 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:20:04,548 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,548 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,549 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:20:04,549 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:20:04,549 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:20:04,553 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,553 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,554 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:20:04,555 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:20:04,555 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:20:04,633 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,634 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,634 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:20:04,635 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:20:04,635 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:20:04,636 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,637 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,637 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:20:04,638 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:20:04,638 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:20:04,640 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,640 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,642 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:20:04,643 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:20:04,643 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:20:04,644 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,645 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,645 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:20:04,646 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:20:04,646 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:20:04,650 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,650 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,651 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:20:04,652 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:20:04,652 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:20:04,664 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,664 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,665 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:20:04,666 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:20:04,666 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:20:04,676 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,677 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,677 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:20:04,678 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:20:04,679 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:20:04,689 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:20:04,689 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:20:04,689 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:20:04,690 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:20:04,691 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:21:01,972 [JavaFX Application Thread] org.example.repository.MeciDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@6abf3168 
+07 Apr 2024 01:21:01,977 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 23 <init> - Initializing AngajatDBRepository with DBUtils: org.example.utils.JdbcUtils@54a5c6ac 
+07 Apr 2024 01:21:01,978 [JavaFX Application Thread] org.example.repository.BiletDBRepository 23 <init> - Initializing MeciDBRepository with DBUtils: org.example.utils.JdbcUtils@1f18a0ce 
+07 Apr 2024 01:21:06,060 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 58 findByUsername - Enter
+07 Apr 2024 01:21:06,062 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 60 findByUsername - Getting a connection with db
+07 Apr 2024 01:21:06,437 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 65 findByUsername - Prepare Statement: select * from angajati where username=test 
+07 Apr 2024 01:21:06,442 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 73 findByUsername - Angajat gasit : Entity{id=3} 
+07 Apr 2024 01:21:06,443 [JavaFX Application Thread] org.example.repository.AngajatDBRepository 85 findByUsername - Exit with(Entity{id=3})
+07 Apr 2024 01:21:06,527 [JavaFX Application Thread] org.example.repository.MeciDBRepository 66 findAll - Enter
+07 Apr 2024 01:21:06,527 [JavaFX Application Thread] org.example.repository.MeciDBRepository 67 findAll - Getting a connection with db
+07 Apr 2024 01:21:06,529 [JavaFX Application Thread] org.example.repository.MeciDBRepository 70 findAll - Prepare Statement: select * from meciuri
+07 Apr 2024 01:21:06,538 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=1} 
+07 Apr 2024 01:21:06,539 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=2} 
+07 Apr 2024 01:21:06,540 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=3} 
+07 Apr 2024 01:21:06,541 [JavaFX Application Thread] org.example.repository.MeciDBRepository 81 findAll - Meci gasit : Entity{id=4} 
+07 Apr 2024 01:21:06,541 [JavaFX Application Thread] org.example.repository.MeciDBRepository 96 findAll - Exit with([Entity{id=1}, Entity{id=2}, Entity{id=3}, Entity{id=4}])
+07 Apr 2024 01:21:06,630 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,630 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,631 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:21:06,633 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:21:06,633 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:21:06,679 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,680 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,681 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:21:06,681 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:21:06,682 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:21:06,687 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,687 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,687 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:21:06,688 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:21:06,689 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:21:06,764 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,765 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,765 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:21:06,768 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:21:06,768 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:21:06,770 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,770 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,771 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:21:06,771 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:21:06,772 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:21:06,774 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,775 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,775 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:21:06,776 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:21:06,776 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:21:06,778 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,778 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,779 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:21:06,779 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:21:06,780 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)
+07 Apr 2024 01:21:06,785 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,786 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,787 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=1
+07 Apr 2024 01:21:06,788 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 50 
+07 Apr 2024 01:21:06,788 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(50)
+07 Apr 2024 01:21:06,801 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,802 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,802 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=2
+07 Apr 2024 01:21:06,803 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 3000 
+07 Apr 2024 01:21:06,804 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(3000)
+07 Apr 2024 01:21:06,813 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,813 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,814 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=3
+07 Apr 2024 01:21:06,815 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 0 
+07 Apr 2024 01:21:06,815 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(0)
+07 Apr 2024 01:21:06,824 [JavaFX Application Thread] org.example.repository.BiletDBRepository 114 nrLocuriOcupateMeci - Enter
+07 Apr 2024 01:21:06,825 [JavaFX Application Thread] org.example.repository.BiletDBRepository 116 nrLocuriOcupateMeci - Getting a connection with db
+07 Apr 2024 01:21:06,825 [JavaFX Application Thread] org.example.repository.BiletDBRepository 119 nrLocuriOcupateMeci - Prepare Statement: SELECT SUM(nr_locuri) AS numar_bilete FROM bilete WHERE id_meci=4
+07 Apr 2024 01:21:06,826 [JavaFX Application Thread] org.example.repository.BiletDBRepository 129 nrLocuriOcupateMeci - Numar bilete gasit : 10 
+07 Apr 2024 01:21:06,826 [JavaFX Application Thread] org.example.repository.BiletDBRepository 136 nrLocuriOcupateMeci - Exit with(10)

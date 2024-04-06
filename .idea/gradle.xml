@@ -5,10 +5,12 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/mod1" />
-        <option name="gradleJvm" value="corretto-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/mod1" />
+            <option value="$PROJECT_DIR$/mod1/client" />
+            <option value="$PROJECT_DIR$/mod1/server" />
+            <option value="$PROJECT_DIR$/mod1/utils" />
           </set>
         </option>
       </GradleProjectSettings>

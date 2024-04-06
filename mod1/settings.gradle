@@ -1,2 +1,5 @@
 rootProject.name = 'mod1'
+include 'server'
+include 'utils'
+include 'client'
 
