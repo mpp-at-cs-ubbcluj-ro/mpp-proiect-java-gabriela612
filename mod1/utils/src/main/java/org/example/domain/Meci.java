@@ -1,8 +1,9 @@
 package org.example.domain;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Meci extends Entity<Integer> {
+public class Meci extends Entity<Integer> implements Serializable {
     private String nume;
     private double pretBilet;
     private int capacitate;

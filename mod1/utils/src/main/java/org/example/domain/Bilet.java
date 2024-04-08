@@ -1,6 +1,8 @@
 package org.example.domain;
 
-public class Bilet extends Entity<Integer> {
+import java.io.Serializable;
+
+public class Bilet extends Entity<Integer> implements Serializable {
     private Meci meci;
     private String numeClient;
     private int nrLocuri;

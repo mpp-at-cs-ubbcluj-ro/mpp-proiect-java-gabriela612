@@ -1,28 +1,34 @@
 package org.example.gui;
 
+import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.example.LoginController;
 import org.example.MainStart;
+import org.example.observer.IObserver;
+import org.example.services.IServices;
 import org.example.utils.*;
-import org.example.service.*;
 import org.example.domain.*;
 
 import java.io.IOException;
+import java.net.URL;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class MeciuriController {
-    Service service;
+public class MeciuriController implements Initializable, IObserver {
+    IServices service;
     Stage stage;
     int idAngajat;
 
@@ -38,14 +44,19 @@ public class MeciuriController {
     private boolean filtru = false;
     public Button buttonFiltru;
 
-    public void setService(Service service, Stage stage, int idAngajat) {
+    public MeciuriController() {
+    }
+
+    public MeciuriController(IServices service) {
         this.service = service;
-        this.stage = stage;
-        this.idAngajat = idAngajat;
-        initData();
+    }
+
+    public void setService(IServices service) {
+        this.service = service;
     }
 
     public void initData() {
+        System.out.println("Am ajuns aici");
         List<Meci> meciuri;
         if (!filtru) {
             meciuri = (List<Meci>) service.getMeciuri();
@@ -84,21 +95,12 @@ public class MeciuriController {
 
     @FXML
     public void handleLogout(ActionEvent actionEvent) {
-
-        FXMLLoader fxmlLoader = new FXMLLoader(MainStart.class.getResource("/login-view.fxml"));
-        Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            service.logout(idAngajat);
+        } catch (Exception e) {
+            System.out.println("Logout error " + e);
         }
-        Stage stage = this.stage;
-        LoginController loginController = fxmlLoader.getController();
-        loginController.setService(service, stage);
-
-        stage.setTitle("Login");
-        stage.setScene(scene);
-        stage.show();
+        ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
     }
 
     @FXML
@@ -133,4 +135,23 @@ public class MeciuriController {
                 "Succes", "Cumpararea biletului a fost inregistrata in baza de date.");
     }
 
+
+    @FXML
+    public void initialize(URL url, ResourceBundle rb) {
+        System.out.println("INIT : " + meciuriTable);
+
+        System.out.println("END INIT!!!!!!!!!");
+    }
+
+    @Override
+    public void schimbareMeciuri(Iterable<Meci> meciuri) {
+        Platform.runLater(()->{
+            List<Meci> meciuri_noi = (List<Meci>) meciuri;
+            model.setAll(meciuri_noi);
+            System.out.println("New meciuri list " + meciuri);
+        });
+    }
+    public void setIdAngajat(Integer idAngajat) {
+        this.idAngajat = idAngajat;
+    }
 }

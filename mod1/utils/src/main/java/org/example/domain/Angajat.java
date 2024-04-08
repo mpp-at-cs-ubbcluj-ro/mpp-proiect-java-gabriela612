@@ -1,8 +1,9 @@
 package org.example.domain;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Angajat extends Entity<Integer> {
+public class Angajat extends Entity<Integer> implements Serializable {
     private String parola;
     private String username;
 
@@ -11,7 +12,13 @@ public class Angajat extends Entity<Integer> {
         this.username = username;
     }
 
+    public String getParola() {
+        return parola;
+    }
 
+    public String getUsername() {
+        return username;
+    }
 
     @Override
     public boolean equals(Object o) {

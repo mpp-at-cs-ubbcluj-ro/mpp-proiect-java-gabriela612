@@ -22,7 +22,7 @@ javafx {
 dependencies {
 
     implementation project (':utils')
-    implementation project (':server')
+//    implementation project (':server')
 
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'

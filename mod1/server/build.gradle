@@ -33,13 +33,13 @@ dependencies {
 }
 
 application {
-    mainClass='org.example.MainStart'
+    mainClass='org.example.StartServer'
 }
 
 jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest {
-        attributes('Main-Class':'MainStart')
+        attributes('Main-Class':'StartServer')
     }
     from {
         configurations.runtimeClasspath.collect {it.isDirectory() ? it : zipTree(it)}

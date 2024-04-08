@@ -1,26 +1,37 @@
 package org.example;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
+import org.example.domain.Angajat;
 import org.example.gui.MeciuriController;
+import org.example.services.IServices;
 import org.example.utils.*;
-import org.example.service.*;
 import org.example.MainStart;
 
 import java.io.IOException;
 
 public class LoginController {
-    Service service;
-    Stage stage;
+    IServices service;
+    private MeciuriController meciuriCtrl;
+    private Angajat angajat;
+    @FXML
+    TextField user;
+    @FXML
+    TextField password;
 
-    public void setService(Service service, Stage stage) {
+    Parent mainChatParent;
+
+    public void setService(IServices service, Stage stage) {
         this.service = service;
-        this.stage = stage;
     }
 
     @FXML
@@ -31,28 +42,48 @@ public class LoginController {
     public void handleLogin(ActionEvent actionEvent) {
         String username = usernameField.getText();
         String parola = parolaField.getText();
-        Integer id_angajat = service.Login(username, parola);
+        angajat = new Angajat(parola, username);
 
-        if (id_angajat == null) {
-            MessageBox.showMessage(null, Alert.AlertType.ERROR,
-                    "Date incorecte", "Datele introduse sunt incorecte.");
-            return;
-        }
 
-        FXMLLoader fxmlLoader = new FXMLLoader(MainStart.class.getResource("/meciuri-view.fxml"));
-        Scene scene = null;
         try {
-            scene = new Scene(fxmlLoader.load());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Stage stage = this.stage;
-        MeciuriController meciuriController = fxmlLoader.getController();
-        meciuriController.setService(service, stage, id_angajat);
-        //closeWindow();
+            this.angajat.setId(service.login(username, parola, meciuriCtrl));
+            // Util.writeLog("User succesfully logged in "+crtUser.getId());
+            Stage stage = new Stage();
+            stage.setTitle("Meciuri Window for " + username);
+            stage.setScene(new Scene(mainChatParent));
 
-        stage.setTitle("Main view");
-        stage.setScene(scene);
-        stage.show();
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent event) {
+                    meciuriCtrl.handleLogout(null);
+                    System.exit(0);
+                }
+            });
+
+            stage.show();
+            meciuriCtrl.setIdAngajat(angajat.getId());
+            ((Node) (actionEvent.getSource())).getScene().getWindow().hide();
+            meciuriCtrl.initData();
+            meciuriCtrl.initialize();
+
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("MPP error");
+            alert.setHeaderText("Authentication failure");
+            alert.setContentText("Wrong username or password");
+            alert.showAndWait();
+        }
+
+    }
+    public void setUser(Angajat angajat) {
+        this.angajat = angajat;
+    }
+
+    public void setController(MeciuriController meciuriController) {
+        this.meciuriCtrl = meciuriController;
+    }
+
+    public void setParent(Parent p) {
+        mainChatParent = p;
     }
 }
