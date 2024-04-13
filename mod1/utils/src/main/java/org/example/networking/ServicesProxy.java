@@ -3,6 +3,7 @@ package org.example.networking;
 import org.example.domain.Angajat;
 import org.example.domain.Bilet;
 import org.example.domain.Meci;
+import org.example.domain.MeciL;
 import org.example.observer.IObserver;
 import org.example.services.IServices;
 
@@ -78,7 +79,7 @@ public class ServicesProxy implements IServices {
     }
 
     @Override
-    public Iterable<Meci> getMeciuri() {
+    public Iterable<MeciL> getMeciuri() {
         Request req=new Request.Builder().type(RequestType.GET_MECIURI).build();
         sendRequest(req);
         Response response=readResponse();
@@ -87,12 +88,13 @@ public class ServicesProxy implements IServices {
 //            throw new ChatException(err);
             return null;
         }
-        Iterable<Meci> meciuri = (Iterable<Meci>) response.data();
+        Iterable<MeciL> meciuri = (Iterable<MeciL>) response.data();
+
         return meciuri;
     }
 
     @Override
-    public Iterable<Meci> getMeciuriLibere() {
+    public Iterable<MeciL> getMeciuriLibere() {
         Request req=new Request.Builder().type(RequestType.GET_MECIURI_LIBERE).build();
         sendRequest(req);
         Response response=readResponse();
@@ -101,7 +103,7 @@ public class ServicesProxy implements IServices {
 //            throw new ChatException(err);
             return null;
         }
-        Iterable<Meci> meciuri = (Iterable<Meci>) response.data();
+        Iterable<MeciL> meciuri = (Iterable<MeciL>) response.data();
         return meciuri;
     }
 
@@ -173,7 +175,7 @@ public class ServicesProxy implements IServices {
 
     private void handleUpdate(Response response){
         if (response.type()== ResponseType.NEW_MECIURI_LIST){
-            Iterable<Meci> meciuri = (Iterable<Meci>) response.data();
+            Iterable<MeciL> meciuri = (Iterable<MeciL>) response.data();
             System.out.println("Lista noua de meciuri "+meciuri);
             try {
                 client.schimbareMeciuri(meciuri);

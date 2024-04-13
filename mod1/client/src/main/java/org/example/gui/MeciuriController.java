@@ -32,13 +32,13 @@ public class MeciuriController implements Initializable, IObserver {
     Stage stage;
     int idAngajat;
 
-    ObservableList<Meci> model = FXCollections.observableArrayList();
+    ObservableList<MeciL> model = FXCollections.observableArrayList();
 
-    public TableView<Meci> meciuriTable;
-    public TableColumn<Meci, String> numeColumn;
-    public TableColumn<Meci, Integer> pretBiletColumn;
-    public TableColumn<Meci, LocalDate> dataColumn;
-    public TableColumn<Meci, String> nrLocuriDisponibileColumn;
+    public TableView<MeciL> meciuriTable;
+    public TableColumn<MeciL, String> numeColumn;
+    public TableColumn<MeciL, Integer> pretBiletColumn;
+    public TableColumn<MeciL, LocalDate> dataColumn;
+    public TableColumn<MeciL, String> nrLocuriDisponibileColumn;
     public TextField numeClientField;
     public Spinner<Integer> nrLocuriSpinner;
     private boolean filtru = false;
@@ -56,14 +56,13 @@ public class MeciuriController implements Initializable, IObserver {
     }
 
     public void initData() {
-        System.out.println("Am ajuns aici");
-        List<Meci> meciuri;
+        List<MeciL> meciuri;
         if (!filtru) {
-            meciuri = (List<Meci>) service.getMeciuri();
+            meciuri = (List<MeciL>) service.getMeciuri();
             this.buttonFiltru.setText("Doar meciurile la care mai sunt bilete");
         }
         else {
-            meciuri = (List<Meci>) service.getMeciuriLibere();
+            meciuri = (List<MeciL>) service.getMeciuriLibere();
             this.buttonFiltru.setText("Toate meciurile");
         }
         model.setAll(meciuri);
@@ -71,12 +70,7 @@ public class MeciuriController implements Initializable, IObserver {
 
     @FXML
     public void initialize(){
-        nrLocuriDisponibileColumn.setCellValueFactory(entity -> {
-            int nr = service.nrLocuriDisponibileMeci(entity.getValue());
-            if (nr != 0)
-                return new SimpleObjectProperty<>(String.valueOf(nr));
-            return new SimpleObjectProperty<>("SOLD OUT");
-        });
+        nrLocuriDisponibileColumn.setCellValueFactory(new PropertyValueFactory<>("nrLocuriDisponibile"));
         numeColumn.setCellValueFactory(new PropertyValueFactory<>("nume"));
         pretBiletColumn.setCellValueFactory(new PropertyValueFactory<>("pretBilet"));
         dataColumn.setCellValueFactory(new PropertyValueFactory<>("data"));
@@ -117,12 +111,15 @@ public class MeciuriController implements Initializable, IObserver {
                     "Date incomplete", "Nu ati completat numele clientului");
             return;
         }
-        Meci meci = meciuriTable.getSelectionModel().getSelectedItem();
-        if (meci == null) {
+        MeciL meciL = meciuriTable.getSelectionModel().getSelectedItem();
+        if (meciL == null) {
             MessageBox.showMessage(null, Alert.AlertType.ERROR,
                     "Selection error", "Nu ati selectat meciul");
             return;
         }
+
+        Meci meci = meciL;
+
         Bilet bilet = service.cumparaBilet(meci, numeClient, nrLocuri);
         if (bilet == null) {
             MessageBox.showMessage(null, Alert.AlertType.ERROR,
@@ -130,7 +127,6 @@ public class MeciuriController implements Initializable, IObserver {
             return;
         }
 
-        initData();
         MessageBox.showMessage(null, Alert.AlertType.INFORMATION,
                 "Succes", "Cumpararea biletului a fost inregistrata in baza de date.");
     }
@@ -144,11 +140,11 @@ public class MeciuriController implements Initializable, IObserver {
     }
 
     @Override
-    public void schimbareMeciuri(Iterable<Meci> meciuri) {
+    public void schimbareMeciuri(Iterable<MeciL> meciuri) {
         Platform.runLater(()->{
-            List<Meci> meciuri_noi = (List<Meci>) meciuri;
+            List<MeciL> meciuri_noi = (List<MeciL>) meciuri;
             model.setAll(meciuri_noi);
-            System.out.println("New meciuri list " + meciuri);
+            System.out.println("New meciuri list controller schimbareMeciuri " + meciuri);
         });
     }
     public void setIdAngajat(Integer idAngajat) {

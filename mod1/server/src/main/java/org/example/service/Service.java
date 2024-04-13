@@ -5,7 +5,9 @@ import org.example.repository.*;
 import org.example.domain.*;
 import org.example.services.IServices;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -29,8 +31,13 @@ public class Service implements IServices {
         Angajat angajat = angajatRepository.findByUsername(username);
         if (angajat.getId() == null)
             return null;
+        if (loggedClients.get(angajat.getId()) != null)
+            return null;
         if (angajat.equals(new Angajat(parola, username)))
+        {
+            this.loggedClients.put(angajat.getId(), client);
             return angajat.getId();
+        }
         return null;
     }
 
@@ -40,7 +47,7 @@ public class Service implements IServices {
 //            throw new Exception("User "+idAngajat+" is not logged in.");
     }
 
-    private void notifyCumparareBilet(Iterable<Meci> meciuri) {
+    private void notifyCumparareBilet(Iterable<MeciL> meciuri) {
         System.out.println("All: "+meciuri);
 
         ExecutorService executor= Executors.newFixedThreadPool(defaultThreadsNo);
@@ -78,12 +85,26 @@ public class Service implements IServices {
     }
 
     @Override
-    public synchronized Iterable<Meci> getMeciuri() {
-        return meciRepository.findAll();
+    public synchronized Iterable<MeciL> getMeciuri() {
+        List<Meci> meciuri = (List<Meci>) meciRepository.findAll();
+        List<MeciL> meciList = new ArrayList<>();
+        meciuri.forEach(m -> {
+            MeciL ml = new MeciL(m.getNume(), m.getPretBilet(), m.getCapacitate(), m.getData(), this.nrLocuriDisponibileMeci(m));
+            ml.setId(m.getId());
+            meciList.add(ml);
+        });
+        return meciList;
     }
 
     @Override
-    public synchronized Iterable<Meci> getMeciuriLibere() {
-        return meciRepository.findMeciuriDisponibile();
+    public synchronized Iterable<MeciL> getMeciuriLibere() {
+        List<Meci> meciuri = (List<Meci>) meciRepository.findMeciuriDisponibile();
+        List<MeciL> meciList = new ArrayList<>();
+        meciuri.forEach(m -> {
+            MeciL ml = new MeciL(m.getNume(), m.getPretBilet(), m.getCapacitate(), m.getData(), this.nrLocuriDisponibileMeci(m));
+            ml.setId(m.getId());
+            meciList.add(ml);
+        });
+        return meciList;
     }
 }

@@ -3,6 +3,7 @@ package org.example.networking;
 import org.example.domain.Angajat;
 import org.example.domain.Bilet;
 import org.example.domain.Meci;
+import org.example.domain.MeciL;
 import org.example.observer.IObserver;
 import org.example.services.IServices;
 
@@ -58,7 +59,7 @@ public class ClientWorker implements Runnable, IObserver {
     }
 
     @Override
-    public void schimbareMeciuri(Iterable<Meci> meciuri){
+    public void schimbareMeciuri(Iterable<MeciL> meciuri){
         Response resp=new Response.Builder().type(ResponseType.NEW_MECIURI_LIST).data(meciuri).build();
         System.out.println("Schimbare meciuri " + meciuri);
         try {
