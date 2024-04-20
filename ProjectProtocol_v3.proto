@@ -1,0 +1,66 @@
+syntax = "proto3";
+package mod1.utils;
+
+//import "google/protobuf/timestamp.proto";
+//import "google/protobuf/duration.proto";
+
+option java_package = "org.example.proto";
+option java_outer_classname = "ProjectProto";
+
+message Angajat {
+  int32 id = 1;
+  string username = 2;
+  string parola = 3;
+}
+
+message MeciL {
+  int32 id = 1;
+  string nume = 2;
+  double pretBilet = 3;
+  int32 capacitate = 4;
+  MyDate data = 5;
+  int32 nrLocuriDisponibile = 6;
+}
+
+message Meci {
+  int32 id = 1;
+  string nume = 2;
+  double pretBilet = 3;
+  int32 capacitate = 4;
+  MyDate data = 5;
+}
+
+message Bilet {
+  int32 id = 1;
+  Meci meci = 2;
+  string numeClient = 3;
+  int32 nrLocuri = 4;
+}
+
+message Request {
+  enum Type {LOGIN = 0; LOGOUT = 1; GET_MECIURI = 2; GET_MECIURI_LIBERE = 3; CUMPARA_BILET = 4; LOCURI_DISPONIBILE = 5 ;}
+  Type type = 1;
+  oneof payload{
+    Angajat angajat = 2;
+    int32 idAngajat = 3;
+    Meci meci = 4;
+    Bilet bilet = 5;
+  }
+}
+
+message Response {
+  enum Type { OK = 0; ERROR = 1; NEW_MECIURI_LIST = 2; LOCURI_DISPONIBILE = 3;}
+  Type type = 1;
+
+  repeated MeciL meciuri = 2;
+  int32 idAngajat = 3;
+  Bilet bilet = 4;
+  string message = 5;
+  int32 nrLocuriDisponibile = 6;
+}
+
+message MyDate {
+  int32 year = 1;
+  int32 month = 2;
+  int32 day = 3;
+}

@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 import org.example.domain.Meci;
 import org.example.gui.MeciuriController;
+import org.example.networking.ProtoServicesProxy;
 import org.example.networking.ServicesProxy;
 import org.example.services.IServices;
 
@@ -57,7 +58,7 @@ public class MainStart extends Application {
         System.out.println("Using server IP " + serverIP);
         System.out.println("Using server port " + serverPort);
 
-        IServices server = new ServicesProxy(serverIP, serverPort);
+        IServices server = new ProtoServicesProxy(serverIP, serverPort);
 
 
 

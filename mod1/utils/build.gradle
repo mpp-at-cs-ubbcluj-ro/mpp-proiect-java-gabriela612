@@ -25,6 +25,9 @@ dependencies {
     implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
     implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.45.1.0'
 
+    // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
+    implementation 'com.google.protobuf:protobuf-java:4.26.1'
+
 }
 
 test {

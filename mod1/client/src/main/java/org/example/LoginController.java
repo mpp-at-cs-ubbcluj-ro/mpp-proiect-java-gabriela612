@@ -70,7 +70,8 @@ public class LoginController {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("MPP error");
             alert.setHeaderText("Authentication failure");
-            alert.setContentText("Wrong username or password");
+            System.out.println(e.getMessage());
+            alert.setContentText(e.getMessage());
             alert.showAndWait();
         }
 
