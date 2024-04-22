@@ -7157,8 +7157,8 @@ public final class ProjectProto {
       "ile\030\006 \001(\005\"G\n\004Type\022\006\n\002OK\020\000\022\t\n\005ERROR\020\001\022\024\n\020" +
       "NEW_MECIURI_LIST\020\002\022\026\n\022LOCURI_DISPONIBILE" +
       "\020\003\"2\n\006MyDate\022\014\n\004year\030\001 \001(\005\022\r\n\005month\030\002 \001(" +
-      "\005\022\013\n\003day\030\003 \001(\005B!\n\021org.example.protoB\014Pro" +
-      "jectProtob\006proto3"
+      "\005\022\013\n\003day\030\003 \001(\005B0\n\021org.example.protoB\014Pro" +
+      "jectProto\252\002\014Utills.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

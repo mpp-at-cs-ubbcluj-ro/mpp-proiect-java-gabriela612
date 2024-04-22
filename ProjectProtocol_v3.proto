@@ -7,6 +7,8 @@ package mod1.utils;
 option java_package = "org.example.proto";
 option java_outer_classname = "ProjectProto";
 
+option csharp_namespace = "Utills.proto";
+
 message Angajat {
   int32 id = 1;
   string username = 2;

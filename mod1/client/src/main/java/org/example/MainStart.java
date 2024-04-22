@@ -19,8 +19,8 @@ import java.util.Properties;
 public class MainStart extends Application {
     private Stage primaryStage;
 
-    private static int defaultChatPort = 55555;
-    private static String defaultServer = "localhost";
+    private static int defaultChatPort = 55556;
+    private static String defaultServer = "127.0.0.1";
     public static void main(String[] args) {
         launch();
     }

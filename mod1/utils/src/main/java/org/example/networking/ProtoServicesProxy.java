@@ -1,5 +1,6 @@
 package org.example.networking;
 
+import com.google.protobuf.MessageLite;
 import org.example.domain.Angajat;
 import org.example.domain.Bilet;
 import org.example.domain.Meci;
@@ -9,9 +10,7 @@ import org.example.proto.ProjectProto;
 import org.example.services.IServices;
 import org.example.utils.ProtoUtils;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -22,8 +21,9 @@ public class ProtoServicesProxy implements IServices {
 
     private IObserver client;
 
-    private ObjectInputStream input;
-    private ObjectOutputStream output;
+    private InputStream input;
+    private OutputStream output;
+
     private Socket connection;
 
     private BlockingQueue<ProjectProto.Response> qresponses;
@@ -37,7 +37,7 @@ public class ProtoServicesProxy implements IServices {
 
     @Override
     public Integer login(String username, String parola, IObserver client) {
-//        initializeConnection();
+        initializeConnection();
         Angajat angajat = new Angajat(parola, username);
         ProjectProto.Request request = ProtoUtils.createLoginRequest(angajat);
         sendRequest(request);
@@ -139,36 +139,41 @@ public class ProtoServicesProxy implements IServices {
 
     private void sendRequest(ProjectProto.Request request) {
         try {
-            output.writeObject(request);
+            System.out.println("Sending request ..."+request);
+            //request.writeTo(output);
+            request.writeDelimitedTo(output);
             output.flush();
+            System.out.println("Request sent.");
         } catch (IOException e) {
-//            throw new ChatException("Error sending object "+e);
+            System.out.println(e.getMessage());
         }
+
 
     }
 
     private ProjectProto.Response readResponse() {
         ProjectProto.Response response=null;
         try{
-
             response=qresponses.take();
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         return response;
+
     }
     private void initializeConnection() {
         try {
             connection=new Socket(host,port);
-            output=new ObjectOutputStream(connection.getOutputStream());
-            output.flush();
-            input=new ObjectInputStream(connection.getInputStream());
+            output = connection.getOutputStream();
+            //output.flush();
+            input = connection.getInputStream();     //new ObjectInputStream(connection.getInputStream());
             finished=false;
             startReader();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
     private void startReader(){
         Thread tw=new Thread(new ReaderThread());
@@ -188,30 +193,35 @@ public class ProtoServicesProxy implements IServices {
     }
 
     private boolean isUpdate(ProjectProto.Response response){
+        if (response == null)
+        {
+            System.out.println("Am primit un raspuns null");
+            return false;
+        }
         return response.getType() == ProjectProto.Response.Type.NEW_MECIURI_LIST;
     }
     private class ReaderThread implements Runnable{
         public void run() {
             while(!finished){
                 try {
-                    Object response=input.readObject();
-                    System.out.println("ProjectProto.Responsereceived "+response);
-                    if (isUpdate((ProjectProto.Response)response)){
-                        handleUpdate((ProjectProto.Response)response);
-                    }else{
+                    ProjectProto.Response response = ProjectProto.Response.parseDelimitedFrom(input);
+                    System.out.println("response received "+response);
 
+                    if (isUpdate(response)){
+                        handleUpdate(response);
+                    }else{
                         try {
-                            qresponses.put((ProjectProto.Response)response);
+                            qresponses.put(response);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                     }
                 } catch (IOException e) {
                     System.out.println("Reading error "+e);
-                } catch (ClassNotFoundException e) {
-                    System.out.println("Reading error "+e);
                 }
             }
         }
+
+
     }
 }

@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class StartServer {
-    private static int defaultPort=55555;
+    private static int defaultPort=55556;
     public static void main(String[] args) {
 
         Properties props=new Properties();

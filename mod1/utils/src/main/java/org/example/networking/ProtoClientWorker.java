@@ -9,9 +9,7 @@ import org.example.proto.ProjectProto;
 import org.example.services.IServices;
 import org.example.utils.ProtoUtils;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 
@@ -19,31 +17,36 @@ public class ProtoClientWorker implements Runnable, IObserver {
     private IServices server;
     private Socket connection;
 
-    private ObjectInputStream input;
-    private ObjectOutputStream output;
+    private InputStream input;
+    private OutputStream output;
+
     private volatile boolean connected;
     public ProtoClientWorker(IServices server, Socket connection) {
         this.server = server;
         this.connection = connection;
         try{
-            output=new ObjectOutputStream(connection.getOutputStream());
-            output.flush();
-            input=new ObjectInputStream(connection.getInputStream());
+            output=connection.getOutputStream() ;//new ObjectOutputStream(connection.getOutputStream());
+            input=connection.getInputStream(); //new ObjectInputStream(connection.getInputStream());
             connected=true;
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     public void run() {
+
         while(connected){
             try {
-                Object request=input.readObject();
-                ProjectProto.Response response = handleRequest((ProjectProto.Request)request);
+                // Object request=input.readObject();
+                System.out.println("Waiting requests ...");
+                ProjectProto.Request request = ProjectProto.Request.parseDelimitedFrom(input);
+                System.out.println("Request received: "+request);
+                ProjectProto.Response response=handleRequest(request);
                 if (response!=null){
                     sendResponse(response);
                 }
-            } catch (IOException | ClassNotFoundException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
             try {
@@ -60,6 +63,8 @@ public class ProtoClientWorker implements Runnable, IObserver {
             System.out.println("Error "+e);
         }
     }
+
+
 
     @Override
     public void schimbareMeciuri(Iterable<MeciL> meciuri){
@@ -147,11 +152,15 @@ public class ProtoClientWorker implements Runnable, IObserver {
         return response;
     }
 
-    private void sendResponse(ProjectProto.Response response) throws IOException{
-        System.out.println("sending response "+response);
-        synchronized (output) {
-            output.writeObject(response);
-            output.flush();
-        }
+    private void sendResponse(ProjectProto.Response response) throws IOException {
+//        System.out.println("sending response "+response);
+//        synchronized (output) {
+//            response.writeDelimitedTo(output);
+//            output.writeObject(response);
+//            output.flush();
+        System.out.println("sending response " + response);
+        response.writeDelimitedTo(output);
+        //output.writeObject(response);
+        output.flush();
     }
 }
