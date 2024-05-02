@@ -1,10 +1,12 @@
 package org.example;
 
+import org.example.domain.Angajat;
 import org.example.networking.AbstractServer;
 import org.example.networking.ConcurrentServer;
 import org.example.repository.*;
 import org.example.service.Service;
 import org.example.services.IServices;
+import org.hibernate.cfg.Configuration;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -31,8 +33,18 @@ public class StartServer {
             return;
         }
 
+
+        System.out.println("Starting Hibernate");
+        var sessionFactory = new Configuration()
+                .addAnnotatedClass(Angajat.class)
+                .buildSessionFactory();
+
+
+        IAngajatRepository angajatRepository = new AngajatHibernateRepository(sessionFactory);
+
+
         IMeciRepository meciRepository = new MeciDBRepository(props);
-        IAngajatRepository angajatRepository = new AngajatDBRepository(props);
+//        IAngajatRepository angajatRepository = new AngajatDBRepository(props);
         IBiletRepository biletRepository = new BiletDBRepository(props);
         IServices service = new Service(angajatRepository, meciRepository, biletRepository);
 
