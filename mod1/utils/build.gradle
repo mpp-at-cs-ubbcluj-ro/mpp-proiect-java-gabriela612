@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.1.5'
 }
 
 javafx {
@@ -37,6 +39,14 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-community-dialects
     implementation 'org.hibernate.orm:hibernate-community-dialects:6.4.4.Final'
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.13.1'
+    testImplementation('com.jayway.jsonpath:json-path')
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+
+    implementation "org.springframework.boot:spring-boot-starter-web:3.0.6"
 
 }
 

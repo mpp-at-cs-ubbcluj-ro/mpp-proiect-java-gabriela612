@@ -3,23 +3,22 @@ package org.example.utils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
 
 @Component
 public class JdbcUtils {
 
     public JdbcUtils() {
         if (url == null) {
-            url = "C:\\Users\\gabig\\Desktop\\Javra\\mpp-proiect-java-gabriela612\\baschet";
+//            url = "jdbc:sqlite:../../baschet";
+            url = "jdbc:sqlite:C:\\Users\\gabig\\Desktop\\Javra\\mpp-proiect-java-gabriela612\\baschet";
         }
     }
 
-    @Value("${spring.datasource.url}")
+//    @Value("${spring.datasource.url:jdbc:sqlite:../../baschet}")
+@Value("${spring.datasource.url:jdbc:sqlite:C:\\Users\\gabig\\Desktop\\Javra\\mpp-proiect-java-gabriela612\\baschet}")
     private String url;
 
     @Value("${spring.datasource.username}")

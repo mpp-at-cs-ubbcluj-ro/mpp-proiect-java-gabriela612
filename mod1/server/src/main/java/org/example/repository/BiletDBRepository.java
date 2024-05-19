@@ -19,7 +19,7 @@ public class BiletDBRepository implements IBiletRepository {
     private static final Logger logger = LogManager.getLogger("FisierLog");
 
     public BiletDBRepository(Properties props) {
-        dbUtils = new JdbcUtils(props);
+        dbUtils = new JdbcUtils();
         logger.info("Initializing MeciDBRepository with DBUtils: {} ", dbUtils);
     }
 

@@ -6,6 +6,7 @@ import org.example.networking.ConcurrentServer;
 import org.example.repository.*;
 import org.example.service.Service;
 import org.example.services.IServices;
+import org.example.utils.JdbcUtils;
 import org.hibernate.cfg.Configuration;
 
 import java.io.FileReader;
@@ -43,7 +44,7 @@ public class StartServer {
         IAngajatRepository angajatRepository = new AngajatHibernateRepository(sessionFactory);
 
 
-        IMeciRepository meciRepository = new MeciDBRepository(props);
+        IMeciRepository meciRepository = new MeciDBRepository(new JdbcUtils());
 //        IAngajatRepository angajatRepository = new AngajatDBRepository(props);
         IBiletRepository biletRepository = new BiletDBRepository(props);
         IServices service = new Service(angajatRepository, meciRepository, biletRepository);

@@ -2,30 +2,28 @@ package org.example.repository;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.domain.*;
+import org.example.domain.Meci;
 import org.example.utils.DateUtils;
 import org.example.utils.JdbcUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-import java.io.FileReader;
-import java.io.IOException;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 
-@Repository
-public class MeciDBRepository implements IMeciRepository {
+@Component
+public class MeciDBRepository2 implements IMeciRepository {
     private JdbcUtils dbUtils;
     private static final Logger logger = LogManager.getLogger("FisierLog");
 
-    public MeciDBRepository() {
+    public MeciDBRepository2() {
         logger.info("Initializing MeciDBRepository");
     }
 
-    public MeciDBRepository(JdbcUtils jdbcUtils) {
+    public MeciDBRepository2(JdbcUtils jdbcUtils) {
 //        Properties props=new Properties();
 //        try {
 //            props.load(new FileReader("../bd.config"));

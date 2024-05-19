@@ -19,7 +19,7 @@ public class AngajatDBRepository implements IAngajatRepository {
     private static final Logger logger = LogManager.getLogger("FisierLog");
 
     public AngajatDBRepository(Properties props) {
-        dbUtils = new JdbcUtils(props);
+        dbUtils = new JdbcUtils();
         logger.info("Initializing AngajatDBRepository with DBUtils: {} ", dbUtils);
     }
 
