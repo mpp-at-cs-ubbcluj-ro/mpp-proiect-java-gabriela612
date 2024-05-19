@@ -95,7 +95,7 @@ public class StartRest {
         controller = new MeciControllerTest();
 
         // Testarea metodei getAll()
-//        testGetAll();
+        testGetAll();
 
         // Testarea metodei getById()
 //        testGetById();
@@ -107,7 +107,7 @@ public class StartRest {
 //        testUpdate();
 
         // Testarea metodei delete()
-        testDelete();
+//        testDelete();
     }
 
 }
